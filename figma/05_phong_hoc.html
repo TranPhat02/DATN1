@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phòng dạy — Giáo viên</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon active">📚</div><div class="rail-icon">📅</div><div class="rail-icon">🔔</div><div class="rail-icon">👤</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Giáo viên</div>
+    <div class="panel-item active">📚 Phòng dạy</div>
+    <div class="panel-item">📅 Lịch dạy</div>
+    <div class="panel-item">🔔 Thông báo</div>
+    <div class="panel-item">👤 Hồ sơ</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">C</div><span style="font-size:.8125rem;color:#d6d6d6">Lê Minh Cường</span></div>
+    </div>
+    <div class="main">
+      <div class="page-header">
+        <h1 class="page-title">Phòng dạy của tôi</h1>
+        <span class="data-count">3 lớp</span>
+      </div>
+      <!-- Filter -->
+      <div style="display:flex;gap:12px;margin-bottom:16px;align-items:center">
+        <span style="color:#64748b">⚙️</span>
+        <select class="input" style="width:180px"><option>Tất cả năm học</option><option selected>2024-2025</option></select>
+        <select class="input" style="width:200px"><option>Tất cả học kỳ</option><option selected>Học kỳ 2</option></select>
+      </div>
+      <!-- Cards Grid -->
+      <div class="classroom-grid">
+        <!-- Card 1 -->
+        <div class="card classroom-card">
+          <div class="classroom-card-header">
+            <div class="classroom-card-icon">📖</div>
+            <div><h3 class="classroom-card-title">Lập trình Web</h3><span class="classroom-card-code">LM001</span></div>
+          </div>
+          <div class="classroom-card-body">
+            <div class="classroom-info-row">🏫 <span>Lớp: CNTT01</span></div>
+            <div class="classroom-info-row">📅 <span>HK2 · 2024-2025</span></div>
+            <div class="classroom-info-row">📅 <span>Thứ 2</span></div>
+            <div class="classroom-info-row">🕐 <span>Ca 1</span></div>
+            <div class="classroom-info-row">📍 <span>Phòng: A301</span></div>
+          </div>
+          <div class="classroom-card-footer">
+            <span class="badge badge-success">Điểm: Mở</span>
+            <span class="badge badge-success">TN: Mở</span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card classroom-card">
+          <div class="classroom-card-header">
+            <div class="classroom-card-icon">📖</div>
+            <div><h3 class="classroom-card-title">Cơ sở dữ liệu</h3><span class="classroom-card-code">LM002</span></div>
+          </div>
+          <div class="classroom-card-body">
+            <div class="classroom-info-row">🏫 <span>Lớp: CNTT02</span></div>
+            <div class="classroom-info-row">📅 <span>HK2 · 2024-2025</span></div>
+            <div class="classroom-info-row">📅 <span>Thứ 4</span></div>
+            <div class="classroom-info-row">🕐 <span>Ca 2</span></div>
+            <div class="classroom-info-row">📍 <span>Phòng: B205</span></div>
+          </div>
+          <div class="classroom-card-footer">
+            <span class="badge badge-success">Điểm: Mở</span>
+            <span class="badge badge-danger">TN: Đóng</span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card classroom-card">
+          <div class="classroom-card-header">
+            <div class="classroom-card-icon">📖</div>
+            <div><h3 class="classroom-card-title">Trí tuệ nhân tạo</h3><span class="classroom-card-code">LM003</span></div>
+          </div>
+          <div class="classroom-card-body">
+            <div class="classroom-info-row">🏫 <span>Lớp: CNTT01</span></div>
+            <div class="classroom-info-row">📅 <span>HK2 · 2024-2025</span></div>
+            <div class="classroom-info-row">📅 <span>Thứ 6</span></div>
+            <div class="classroom-info-row">🕐 <span>Ca 3</span></div>
+            <div class="classroom-info-row">📍 <span>Phòng: C102</span></div>
+          </div>
+          <div class="classroom-card-footer">
+            <span class="badge badge-danger">Điểm: Đóng</span>
+            <span class="badge badge-success">TN: Mở</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

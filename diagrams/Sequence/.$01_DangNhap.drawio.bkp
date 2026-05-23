@@ -1,0 +1,149 @@
+<mxfile host="Electron" agent="draw.io" version="29.5.2">
+  <diagram id="seq-login" name="Sequence - Dang Nhap">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="So do Sequence - Dang nhap" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=16;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="470" y="770" width="260" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Actor: Nguoi dung -->
+        <mxCell id="a1" value="Nguoi dung" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="80" y="30" width="30" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=10;rotatable=0;labelPosition=left;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;fontColor=#FFFFFF;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="94" y="100" width="1" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Participant: Frontend -->
+        <mxCell id="a2" value="Frontend&#xa;(React)" style="shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="250" y="30" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=10;rotatable=0;labelPosition=left;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;fontColor=#FFFFFF;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="299" y="100" width="1" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Participant: Backend API -->
+        <mxCell id="a3" value="Backend API&#xa;(FastAPI)" style="shape=mxgraph.flowchart.multi-document;whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="500" y="30" width="100" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=10;rotatable=0;labelPosition=left;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;fontColor=#FFFFFF;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="549" y="100" width="1" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Participant: Database -->
+        <mxCell id="a4" value="Database&#xa;(MySQL)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="750" y="30" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=10;rotatable=0;labelPosition=left;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;fontColor=#FFFFFF;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="789" y="100" width="1" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1: User enters credentials -->
+        <mxCell id="m1" value="1. Nhap username va mat khau" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="140" as="sourcePoint" />
+            <mxPoint x="299" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 2: Frontend sends POST /api/v1/auth/login -->
+        <mxCell id="m2" value="2. POST /api/v1/auth/login (form-data)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="190" as="sourcePoint" />
+            <mxPoint x="549" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 3: Backend queries DB -->
+        <mxCell id="m3" value="3. SELECT TaiKhoan WHERE UserName = ?" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="240" as="sourcePoint" />
+            <mxPoint x="789" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 4: DB returns user record -->
+        <mxCell id="m4" value="4. Tra ve ban ghi TaiKhoan" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="789" y="290" as="sourcePoint" />
+            <mxPoint x="550" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 5: Verify password -->
+        <mxCell id="m5" value="5. Xac minh mat khau (verify_password)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="340" as="sourcePoint" />
+            <mxPoint x="640" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5b" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="360" as="sourcePoint" />
+            <mxPoint x="550" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 6: Create JWT -->
+        <mxCell id="m6" value="6. Tao JWT (create_access_token)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="400" as="sourcePoint" />
+            <mxPoint x="640" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6b" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640" y="420" as="sourcePoint" />
+            <mxPoint x="550" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 7: Return token + role -->
+        <mxCell id="m7" value="7. Tra ve {access_token, role, username}" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="549" y="480" as="sourcePoint" />
+            <mxPoint x="300" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 8: Save to localStorage -->
+        <mxCell id="m8" value="8. Luu token vao localStorage" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="530" as="sourcePoint" />
+            <mxPoint x="390" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8b" value="" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="550" as="sourcePoint" />
+            <mxPoint x="300" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Step 9: Redirect based on role -->
+        <mxCell id="m9" value="9. Chuyen huong theo role (admin/teacher/student)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="299" y="600" as="sourcePoint" />
+            <mxPoint x="95" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Alt: Error -->
+        <mxCell id="alt1" value="[Sai mat khau]" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="400" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="m_err" value="HTTP 401: Sai ten dang nhap hoac mat khau" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FF4444;fontColor=#FF4444;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="549" y="690" as="sourcePoint" />
+            <mxPoint x="300" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

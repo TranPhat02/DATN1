@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thông báo Hệ thống — Admin</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon">📊</div><div class="rail-icon">👥</div><div class="rail-icon">📅</div><div class="rail-icon">📁</div><div class="rail-icon active">🔔</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Quản trị</div>
+    <div class="panel-item">📊 Dashboard</div><div class="panel-item">👨‍🎓 Sinh viên</div><div class="panel-item">👨‍🏫 Giáo viên</div>
+    <div class="panel-item">📖 Lớp Môn Học</div><div class="panel-item">📅 Lịch học</div>
+    <div class="panel-item">📁 Tài liệu</div><div class="panel-item active">🔔 Thông báo</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">A</div><span style="font-size:.8125rem;color:#d6d6d6">Admin</span></div>
+    </div>
+    <div class="main">
+      <div class="page-header">
+        <h1 class="page-title" style="display:flex;align-items:center;gap:8px">🔔 Thông báo Hệ thống</h1>
+        <button class="btn btn-primary">＋ Tạo thông báo</button>
+      </div>
+
+      <!-- Create Form -->
+      <div class="card" style="padding:20px;margin-bottom:20px;border:1px solid #a5b4fc">
+        <h4 style="margin-bottom:12px;color:#f1f5f9">Tạo thông báo mới</h4>
+        <div class="input-group" style="margin-bottom:12px">
+          <label>Tiêu đề</label>
+          <input class="input" placeholder="Nhập tiêu đề thông báo..." value="Thông báo lịch thi cuối kỳ">
+        </div>
+        <div class="input-group" style="margin-bottom:12px">
+          <label>Nội dung</label>
+          <textarea class="input" rows="3" style="resize:vertical">Sinh viên chú ý: Lịch thi cuối kỳ HK2 năm học 2024-2025 đã được cập nhật. Vui lòng kiểm tra trên hệ thống.</textarea>
+        </div>
+        <div class="input-group" style="margin-bottom:12px">
+          <label>Đính kèm tài liệu</label>
+          <input class="input" type="file" style="padding:8px">
+        </div>
+        <!-- Recipient targeting -->
+        <div class="input-group" style="margin-bottom:16px">
+          <label style="display:flex;align-items:center;gap:8px;margin-bottom:8px">🔽 Đối tượng nhận thông báo</label>
+          <div class="pill-group">
+            <span class="pill active">Tất cả</span>
+            <span class="pill">Tất cả sinh viên</span>
+            <span class="pill">Tất cả giáo viên</span>
+            <span class="pill">Theo khoá học</span>
+            <span class="pill">Chọn cụ thể</span>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:8px">
+          <button class="btn btn-ghost">Hủy</button>
+          <button class="btn btn-primary">Đăng thông báo</button>
+        </div>
+      </div>
+
+      <!-- Announcement History -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card" style="padding:16px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+            <h4 style="margin:0;color:#818cf8">Thông báo nghỉ lễ 30/4 - 1/5</h4>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+              <span style="font-size:.8125rem;color:#64748b">28/04/2025 14:30</span>
+              <button class="btn btn-ghost btn-sm" style="padding:4px 8px">✏️</button>
+              <button class="btn btn-ghost btn-sm" style="padding:4px 8px;color:#f87171">🗑</button>
+            </div>
+          </div>
+          <div style="font-size:.8125rem;color:#94a3b8;margin-bottom:12px">Đăng bởi: <strong>Admin</strong></div>
+          <p style="white-space:pre-wrap;margin:0">Nhà trường thông báo cho toàn thể sinh viên và giáo viên được nghỉ lễ từ ngày 30/04 đến hết ngày 01/05/2025. Lịch học bù sẽ được thông báo sau.</p>
+        </div>
+        <div class="card" style="padding:16px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px">
+            <h4 style="margin:0;color:#818cf8">Cập nhật hệ thống v2.5</h4>
+            <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+              <span style="font-size:.8125rem;color:#64748b">20/04/2025 09:00</span>
+              <button class="btn btn-ghost btn-sm" style="padding:4px 8px">✏️</button>
+              <button class="btn btn-ghost btn-sm" style="padding:4px 8px;color:#f87171">🗑</button>
+            </div>
+          </div>
+          <div style="font-size:.8125rem;color:#94a3b8;margin-bottom:12px">Đăng bởi: <strong>Admin</strong></div>
+          <p style="white-space:pre-wrap;margin:0;margin-bottom:12px">Hệ thống đã được cập nhật phiên bản mới với tính năng AI tạo câu trắc nghiệm tự động.</p>
+          <a href="#" class="btn btn-secondary btn-sm" style="display:inline-flex;gap:8px;align-items:center">📎 Release_Notes_v2.5.pdf</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

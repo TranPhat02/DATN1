@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Tạo câu trắc nghiệm</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon active">📚</div><div class="rail-icon">📅</div><div class="rail-icon">🔔</div><div class="rail-icon">👤</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Giáo viên</div>
+    <div class="panel-item active">📚 Phòng dạy</div>
+    <div class="panel-item">📅 Lịch dạy</div>
+    <div class="panel-item">🔔 Thông báo</div>
+    <div class="panel-item">👤 Hồ sơ</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">C</div><span style="font-size:.8125rem;color:#d6d6d6">Lê Minh Cường</span></div>
+    </div>
+    <div class="main">
+      <!-- Detail Header -->
+      <div class="detail-header">
+        <button class="btn btn-ghost">← Quay lại</button>
+        <h1 class="page-title">Lập trình Web</h1>
+      </div>
+      <!-- Tabs -->
+      <div class="detail-tabs">
+        <button class="detail-tab">📄 Tài liệu</button>
+        <button class="detail-tab">🔔 Thông báo</button>
+        <button class="detail-tab">📊 Điểm môn</button>
+        <button class="detail-tab active">✏️ Tạo TN</button>
+        <button class="detail-tab">📋 Danh sách TN</button>
+        <button class="detail-tab">📝 Chấm điểm</button>
+        <button class="detail-tab">🎓 Điểm TN</button>
+        <button class="detail-tab">📎 Bài tập</button>
+        <button class="detail-tab">💬 Trò chuyện</button>
+      </div>
+      <!-- AI Create Quiz -->
+      <div class="card" style="padding:24px">
+        <h3 style="color:#f1f5f9;margin-bottom:16px;display:flex;align-items:center;gap:8px">
+          ✨ Tạo quiz bằng AI
+        </h3>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px">
+          <label style="color:#94a3b8;font-size:.8125rem">Chọn tài liệu nguồn:</label>
+          <!-- File list -->
+          <div style="border:1px solid rgba(99,102,241,.4);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:8px;background:rgba(99,102,241,.05);cursor:pointer">
+            <span style="color:#34d399">✅</span>
+            <span>📄 Slide_Chuong1.pptx</span>
+            <span style="color:#34d399;margin-left:auto">✓</span>
+          </div>
+          <div style="border:1px solid rgba(51,65,85,.6);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:8px;cursor:pointer">
+            <span>📄 Baitap_HTML_CSS.pdf</span>
+          </div>
+          <div style="border:1px solid rgba(51,65,85,.6);border-radius:8px;padding:10px 14px;display:flex;align-items:center;gap:8px;cursor:pointer">
+            <span>📁 Bài giảng</span>
+          </div>
+        </div>
+        <div class="input-group" style="margin-bottom:16px">
+          <label>Số câu hỏi</label>
+          <input class="input" type="number" value="10" style="width:120px">
+        </div>
+        <div style="display:flex;justify-content:flex-end">
+          <button class="btn btn-primary">✨ Tạo quiz</button>
+        </div>
+      </div>
+
+      <!-- Preview: AI Generated Questions -->
+      <div style="margin-top:24px">
+        <div class="card" style="padding:24px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+            <span style="font-size:1.5rem;color:#34d399">✅</span>
+            <h3 style="color:#f1f5f9">Bài kiểm tra đã tạo</h3>
+            <span class="badge badge-success" style="margin-left:auto">AI</span>
+          </div>
+          <p style="color:#94a3b8;margin-bottom:16px"><strong>Kiểm tra Chương 1 - HTML CSS</strong> — 3 câu • 30 phút</p>
+          <!-- Q1 -->
+          <div style="border:1px solid rgba(51,65,85,.6);border-radius:8px;padding:16px;margin-bottom:12px;background:rgba(30,41,59,.5)">
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><strong>Câu 1:</strong><span class="badge badge-success" style="font-size:.65rem">Trắc nghiệm</span></div>
+            <p style="margin-bottom:12px">Thẻ HTML nào dùng để tạo liên kết?</p>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">A. &lt;link&gt;</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem;background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.3)">B. &lt;a&gt; ✓</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">C. &lt;href&gt;</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">D. &lt;url&gt;</div>
+            </div>
+            <div style="margin-top:8px;padding:8px;background:#334155;border-radius:6px;font-size:.85rem"><strong style="color:#fbbf24">💡 Giải thích:</strong> Thẻ &lt;a&gt; (anchor) dùng để tạo liên kết trong HTML.</div>
+          </div>
+          <!-- Q2 -->
+          <div style="border:1px solid rgba(51,65,85,.6);border-radius:8px;padding:16px;margin-bottom:12px;background:rgba(30,41,59,.5)">
+            <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><strong>Câu 2:</strong><span class="badge badge-success" style="font-size:.65rem">Trắc nghiệm</span></div>
+            <p style="margin-bottom:12px">CSS viết tắt của?</p>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem;background:rgba(16,185,129,.15);color:#34d399;border:1px solid rgba(16,185,129,.3)">A. Cascading Style Sheets ✓</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">B. Creative Style Sheets</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">C. Computer Style Sheets</div>
+              <div style="padding:6px 12px;border-radius:6px;font-size:.8125rem">D. Colorful Style Sheets</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;margin-top:16px;justify-content:flex-end">
+            <button class="btn btn-secondary">➕ Tạo mới</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

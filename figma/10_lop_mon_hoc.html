@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lớp Môn Học — Admin</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon">📊</div><div class="rail-icon">👥</div><div class="rail-icon active">📖</div><div class="rail-icon">📅</div><div class="rail-icon">📁</div><div class="rail-icon">🔔</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Quản trị</div>
+    <div class="panel-item">📊 Dashboard</div><div class="panel-item">👨‍🎓 Sinh viên</div><div class="panel-item">👨‍🏫 Giáo viên</div>
+    <div class="panel-item">🏫 Lớp</div><div class="panel-item">📚 Môn học</div>
+    <div class="panel-item active">📖 Lớp Môn Học</div>
+    <div class="panel-item">📅 Năm học</div><div class="panel-item">🗓 Học kì</div>
+    <div class="panel-item">📅 Lịch học</div><div class="panel-item">📁 Tài liệu</div><div class="panel-item">🔔 Thông báo</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">A</div><span style="font-size:.8125rem;color:#d6d6d6">Admin</span></div>
+    </div>
+    <div class="main">
+      <div class="page-header"><h1 class="page-title">Quản lý Lớp môn học</h1></div>
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="tbl-title">Lớp Môn Học</span>
+          <span class="data-count">2 bản ghi</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-bar"><span class="icon">🔍</span><input class="input" placeholder="Tìm kiếm..." style="width:200px"></div>
+          <button class="btn btn-secondary btn-sm">📥 Import CSV</button>
+          <button class="btn btn-secondary btn-sm">📤 Export CSV</button>
+          <button class="btn btn-primary btn-sm">＋ Thêm</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>#</th><th>Mã LM</th><th>Tên lớp môn</th><th>Môn học</th><th>Lớp</th><th>Giáo viên</th><th>Học kỳ</th><th>Xem điểm</th><th>Xem TN</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="row-num">1</td><td>LM001</td><td>Lập trình Web - CNTT01</td><td>Lập trình Web</td><td>CNTT01 - CNTT K20</td><td>Lê Minh Cường</td><td>HK2 (2024-2025)</td>
+              <td><span class="badge badge-success">Có</span></td>
+              <td><span class="badge badge-success">Có</span></td>
+              <td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td>
+            </tr>
+            <tr>
+              <td class="row-num">2</td><td>LM002</td><td>Cơ sở dữ liệu - CNTT02</td><td>Cơ sở dữ liệu</td><td>CNTT02 - CNTT K20</td><td>Phạm Thị Dung</td><td>HK2 (2024-2025)</td>
+              <td><span class="badge badge-success">Có</span></td>
+              <td><span class="badge badge-danger">Không</span></td>
+              <td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

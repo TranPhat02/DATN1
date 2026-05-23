@@ -1,0 +1,133 @@
+<mxfile host="Electron" agent="draw.io" version="29.5.2">
+  <diagram id="seq-ai-chat" name="Sequence - Tro Ly AI">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="So do Sequence - Tro ly AI (Chatbot Gemini)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=16;fontStyle=1;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1010" width="380" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="Sinh vien" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="30" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="" style="line;strokeWidth=1;dashed=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="74" y="100" width="1" height="880" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="Giao dien" style="whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="225" y="55" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="" style="line;strokeWidth=1;dashed=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="269" y="85" width="1" height="895" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="265" y="130" width="10" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="He thong" style="whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="475" y="55" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="" style="line;strokeWidth=1;dashed=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="519" y="85" width="1" height="895" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="515" y="180" width="10" height="670" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="Co so du lieu" style="whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="725" y="55" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="" style="line;strokeWidth=1;dashed=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="769" y="85" width="1" height="895" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="765" y="220" width="10" height="520" as="geometry" />
+        </mxCell>
+        <!-- Gemini AI -->
+        <mxCell id="b5" value="Gemini AI" style="whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="975" y="55" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" value="" style="line;strokeWidth=1;dashed=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1019" y="85" width="1" height="895" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="1015" y="560" width="10" height="100" as="geometry" />
+        </mxCell>
+        <!-- Messages -->
+        <mxCell id="m1" value="1. Nhap cau hoi cho AI" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="75" y="150" as="sourcePoint" />
+            <mxPoint x="269" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" value="2. POST /api/v1/chat/ai {ma_lop_mon, question}" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="200" as="sourcePoint" />
+            <mxPoint x="519" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" value="3. Luu cau hoi cua SV vao MongoDB (channel=ai)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="250" as="sourcePoint" />
+            <mxPoint x="769" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" value="4. Phan giai ten SV tu MaSV (MySQL)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="310" as="sourcePoint" />
+            <mxPoint x="769" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4b" value="TenSV" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="769" y="340" as="sourcePoint" />
+            <mxPoint x="520" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <!-- Context fragment -->
+        <mxCell id="grp1" value="[Thu thap ngu canh lop hoc]" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontColor=#FFFFFF;strokeColor=#FFFFFF;fillColor=none;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="500" y="370" width="300" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="5. Lay 20 thong bao gan nhat (MongoDB)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="420" as="sourcePoint" />
+            <mxPoint x="769" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" value="6. Lay 50 tin nhan gan nhat (MongoDB)" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="470" as="sourcePoint" />
+            <mxPoint x="769" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" value="7. Gui prompt (system + ngu canh + cau hoi) toi Gemini" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="570" as="sourcePoint" />
+            <mxPoint x="1019" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7b" value="8. Cau tra loi AI (tieng Viet)" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1019" y="620" as="sourcePoint" />
+            <mxPoint x="520" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m8" value="9. Luu cau tra loi AI vao MongoDB" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="680" as="sourcePoint" />
+            <mxPoint x="769" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" value="10. Tra ve cau tra loi AI" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="519" y="760" as="sourcePoint" />
+            <mxPoint x="270" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" value="11. Hien thi cau tra loi trong khung chat" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="269" y="830" as="sourcePoint" />
+            <mxPoint x="75" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

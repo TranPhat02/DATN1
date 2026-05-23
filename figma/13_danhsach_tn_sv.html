@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danh sách Trắc nghiệm — Sinh viên</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon active">📚</div><div class="rail-icon">📅</div><div class="rail-icon">📊</div><div class="rail-icon">🔔</div><div class="rail-icon">👤</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Sinh viên</div>
+    <div class="panel-item active">📚 Lớp học</div>
+    <div class="panel-item">📅 Lịch học</div>
+    <div class="panel-item">📊 Kết quả học tập</div>
+    <div class="panel-item">🔔 Thông báo</div>
+    <div class="panel-item">👤 Hồ sơ</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">N</div><span style="font-size:.8125rem;color:#d6d6d6">Nguyễn Văn An</span></div>
+    </div>
+    <div class="main">
+      <div class="detail-header">
+        <button class="btn btn-ghost">← Quay lại</button>
+        <h1 class="page-title">Lập trình Web</h1>
+      </div>
+      <div class="detail-tabs">
+        <button class="detail-tab">📄 Tài liệu</button>
+        <button class="detail-tab">🔔 Thông báo</button>
+        <button class="detail-tab active">📋 Danh sách TN</button>
+        <button class="detail-tab">📎 Bài tập</button>
+        <button class="detail-tab">💬 Trò chuyện</button>
+      </div>
+      <!-- Search -->
+      <div style="margin-bottom:16px;display:flex;align-items:center;gap:12px">
+        <div class="search-bar" style="flex:1;max-width:400px"><span class="icon">🔍</span><input class="input" placeholder="Tìm kiếm bài trắc nghiệm..." style="padding-left:36px"></div>
+        <span style="font-size:.8125rem;color:#64748b">3 bài</span>
+      </div>
+      <!-- Quiz List -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <!-- Quiz 1: Completed -->
+        <div class="card quiz-list-item">
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <h4 style="color:#f1f5f9;margin:0">Kiểm tra Chương 1 - HTML CSS</h4>
+              <span class="badge badge-success" style="font-size:.65rem;display:flex;align-items:center;gap:2px">✅ Đã làm</span>
+            </div>
+            <span style="font-size:.8125rem;color:#94a3b8">10 câu • 30 phút</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-secondary btn-sm">Xem lại</button>
+            <button class="btn btn-primary btn-sm">Làm lại</button>
+          </div>
+        </div>
+        <!-- Quiz 2: Pending grading -->
+        <div class="card quiz-list-item">
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <h4 style="color:#f1f5f9;margin:0">Kiểm tra giữa kỳ</h4>
+              <span class="badge badge-success" style="font-size:.65rem;display:flex;align-items:center;gap:2px">✅ Đã làm</span>
+              <span class="badge badge-warning" style="font-size:.65rem">⏳ Chờ chấm</span>
+            </div>
+            <span style="font-size:.8125rem;color:#94a3b8">
+              20 câu • 45 phút
+              <span style="margin-left:8px;color:#fbbf24">• Hạn chót: 20/04/2025, 23:59</span>
+            </span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-secondary btn-sm" disabled style="opacity:.5;cursor:not-allowed">Chờ chấm</button>
+            <button class="btn btn-primary btn-sm" disabled style="opacity:.5;cursor:not-allowed">Đã khoá</button>
+          </div>
+        </div>
+        <!-- Quiz 3: Not done, locked -->
+        <div class="card quiz-list-item" style="opacity:.6">
+          <div style="flex:1">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <h4 style="color:#f1f5f9;margin:0">Kiểm tra cuối kỳ</h4>
+              <span class="badge badge-danger" style="font-size:.65rem">🔒 Khoá cứng</span>
+            </div>
+            <span style="font-size:.8125rem;color:#94a3b8">30 câu • 60 phút</span>
+          </div>
+          <div style="display:flex;gap:8px">
+            <button class="btn btn-primary btn-sm" disabled style="opacity:.5;cursor:not-allowed">Đã khoá</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

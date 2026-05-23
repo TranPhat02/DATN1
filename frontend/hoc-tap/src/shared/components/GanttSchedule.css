@@ -1,0 +1,112 @@
+/* ═══════════════════════════════════════════════
+   GanttSchedule Styles
+   ═══════════════════════════════════════════════ */
+
+.gantt-container {
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.gantt-scroll {
+  overflow-x: auto;
+}
+
+.gantt-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.gantt-th-ca {
+  width: 100px;
+  min-width: 100px;
+  background: var(--bg-tertiary);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-primary);
+  text-align: center;
+}
+
+.gantt-th-thu {
+  background: var(--bg-tertiary);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--teams-accent);
+  text-align: center;
+  border-bottom: 1px solid var(--border-primary);
+  border-left: 1px solid var(--border-secondary);
+  min-width: 140px;
+}
+
+.gantt-ca-cell {
+  background: var(--bg-input);
+  padding: var(--space-3) var(--space-4);
+  text-align: center;
+  border-bottom: 1px solid var(--border-secondary);
+  vertical-align: middle;
+}
+
+.gantt-ca-label {
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  color: var(--text-primary);
+}
+
+.gantt-ca-time {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.gantt-cell {
+  padding: var(--space-2);
+  border-bottom: 1px solid var(--border-secondary);
+  border-left: 1px solid var(--border-secondary);
+  vertical-align: top;
+  min-height: 80px;
+}
+
+.gantt-item {
+  background: rgba(98, 100, 167, 0.1);
+  border: 1px solid rgba(98, 100, 167, 0.25);
+  border-left: 3px solid var(--teams-accent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  margin-bottom: var(--space-1);
+  transition: all var(--transition-fast);
+}
+
+.gantt-item:hover {
+  background: rgba(98, 100, 167, 0.18);
+  border-color: var(--teams-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.gantt-item-subject {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--teams-accent);
+  margin-bottom: 2px;
+}
+
+.gantt-item-detail {
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.gantt-item-date {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+.gantt-empty {
+  min-height: 60px;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lịch học — Admin</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon">📊</div><div class="rail-icon">👥</div><div class="rail-icon">📖</div><div class="rail-icon active">📅</div><div class="rail-icon">📁</div><div class="rail-icon">🔔</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Quản trị</div>
+    <div class="panel-item">📊 Dashboard</div><div class="panel-item">👨‍🎓 Sinh viên</div><div class="panel-item">👨‍🏫 Giáo viên</div>
+    <div class="panel-item">📖 Lớp Môn Học</div>
+    <div class="panel-item active">📅 Lịch học</div>
+    <div class="panel-item">📁 Tài liệu</div><div class="panel-item">🔔 Thông báo</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">A</div><span style="font-size:.8125rem;color:#d6d6d6">Admin</span></div>
+    </div>
+    <div class="main">
+      <!-- Top buttons -->
+      <div style="display:flex;justify-content:flex-end;gap:12px;margin-bottom:12px">
+        <button class="btn btn-secondary btn-sm">📥 Import CSV</button>
+        <button class="btn btn-secondary btn-sm">📤 Xuất CSV</button>
+      </div>
+      <div class="page-header"><h1 class="page-title">Quản lý Lịch học</h1></div>
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="tbl-title">Lịch học</span>
+          <span class="data-count">2 bản ghi</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-bar"><span class="icon">🔍</span><input class="input" placeholder="Tìm kiếm..." style="width:200px"></div>
+          <button class="btn btn-primary btn-sm">＋ Thêm</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>#</th><th>Mã lịch</th><th>Mã lớp môn</th><th>Môn học</th><th>Thứ</th><th>Ca</th><th>Phòng</th><th>Bắt đầu</th><th>Kết thúc</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr><td class="row-num">1</td><td>LH001</td><td>LM001</td><td>Lập trình Web</td><td>Thứ 2</td><td>Ca 1</td><td>A301</td><td>10/02/2025</td><td>30/05/2025</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+            <tr><td class="row-num">2</td><td>LH002</td><td>LM002</td><td>Cơ sở dữ liệu</td><td>Thứ 4</td><td>Ca 2</td><td>B205</td><td>10/02/2025</td><td>30/05/2025</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Gantt Schedule -->
+      <div style="margin-top:32px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:16px">
+          <h3 style="color:#f1f5f9;display:flex;align-items:center;gap:8px;margin:0">📅 Thời khóa biểu</h3>
+          <div style="display:flex;gap:16px;align-items:center">
+            <label style="font-weight:500;font-size:.875rem">Lọc theo:</label>
+            <select class="input" style="width:180px"><option>-- Tất cả Năm học --</option><option selected>2024-2025</option></select>
+            <select class="input" style="width:180px"><option>-- Tất cả Học kì --</option><option selected>Học kỳ 2</option></select>
+          </div>
+        </div>
+        <div class="gantt-grid">
+          <div class="gantt-header">Ca / Thứ</div>
+          <div class="gantt-header">Thứ 2</div>
+          <div class="gantt-header">Thứ 3</div>
+          <div class="gantt-header">Thứ 4</div>
+          <div class="gantt-header">Thứ 5</div>
+          <div class="gantt-header">Thứ 6</div>
+          <div class="gantt-header">Thứ 7</div>
+          <!-- Ca 1 -->
+          <div class="gantt-cell" style="background:#334155;font-weight:600;display:flex;align-items:center;justify-content:center;color:#94a3b8">Ca 1</div>
+          <div class="gantt-cell"><div class="gantt-item">Lập trình Web<br>A301<br>LM001</div></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <!-- Ca 2 -->
+          <div class="gantt-cell" style="background:#334155;font-weight:600;display:flex;align-items:center;justify-content:center;color:#94a3b8">Ca 2</div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"><div class="gantt-item">Cơ sở dữ liệu<br>B205<br>LM002</div></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <!-- Ca 3 -->
+          <div class="gantt-cell" style="background:#334155;font-weight:600;display:flex;align-items:center;justify-content:center;color:#94a3b8">Ca 3</div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"><div class="gantt-item">Trí tuệ nhân tạo<br>C102<br>LM003</div></div>
+          <div class="gantt-cell"></div>
+          <!-- Ca 4 -->
+          <div class="gantt-cell" style="background:#334155;font-weight:600;display:flex;align-items:center;justify-content:center;color:#94a3b8">Ca 4</div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+          <div class="gantt-cell"></div>
+        </div>
+      </div>
+
+      <!-- CSV hint -->
+      <div style="margin-top:16px;padding:12px 16px;background:#1e293b;border-radius:8px;font-size:.8125rem;color:#64748b">
+        💡 <strong>Định dạng CSV import:</strong> cột bắt buộc <code style="color:#a5b4fc">MaLopMon</code>, tùy chọn: <code style="color:#a5b4fc">Thu</code> · <code style="color:#a5b4fc">Ca</code> · <code style="color:#a5b4fc">PhongHoc</code> · <code style="color:#a5b4fc">NgayBatDau</code> · <code style="color:#a5b4fc">NgayKetThuc</code>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

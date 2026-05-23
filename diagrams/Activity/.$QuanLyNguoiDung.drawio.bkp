@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" type="device">
+  <diagram id="activity-diagram" name="Page-1">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1800" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ===== TITLE ===== -->
+        <mxCell id="title" value="So do Activity - Dang Ky Nguoi Dung (Admin)" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;html=1;fontColor=#FFFFFF;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== SWIMLANE: Admin ===== -->
+        <mxCell id="lane_admin" value="Admin" style="shape=mxgraph.flowchart.swimlane;startSize=30;swimlaneLine=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=14;fontStyle=1;horizontal=0;childLayout=;collapsible=0;container=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="500" height="1520" as="geometry" />
+        </mxCell>
+
+        <!-- ===== SWIMLANE: He Thong ===== -->
+        <mxCell id="lane_system" value="He Thong" style="shape=mxgraph.flowchart.swimlane;startSize=30;swimlaneLine=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=14;fontStyle=1;horizontal=0;childLayout=;collapsible=0;container=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="80" width="500" height="1520" as="geometry" />
+        </mxCell>
+
+        <!-- ===== START NODE ===== -->
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="120" width="40" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A1: Truy cap trang quan ly nguoi dung ===== -->
+        <mxCell id="a1" value="Truy cap trang Quan ly Nguoi dung" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A2: Chon loai nguoi dung (Decision) ===== -->
+        <mxCell id="a2" value="Chon loai nguoi dung can dang ky" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="260" y="310" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A3a: Chon Dang ky Sinh vien ===== -->
+        <mxCell id="a3a" value="Chon Dang ky Sinh vien" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="140" y="460" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A3b: Chon Dang ky Giao vien ===== -->
+        <mxCell id="a3b" value="Chon Dang ky Giao vien" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="400" y="460" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== MERGE NODE ===== -->
+        <mxCell id="merge1" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;size=10;" vertex="1" parent="1">
+          <mxGeometry x="320" y="570" width="60" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A4: Nhap thong tin ca nhan ===== -->
+        <mxCell id="a4" value="Nhap thong tin ca nhan (Ma, Ten, Lop, Gmail, SDT, ...)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="240" y="650" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A5: Nhan Luu / Dang ky ===== -->
+        <mxCell id="a5" value="Nhan nut Luu / Dang ky" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="270" y="760" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S1: Kiem tra du lieu hop le ===== -->
+        <mxCell id="s1" value="Kiem tra du lieu hop le" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="770" y="760" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S2: Du lieu hop le? (Decision) ===== -->
+        <mxCell id="s2" value="Du lieu hop le?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="790" y="870" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S3: Hien thi loi (trung ma / thieu thong tin) ===== -->
+        <mxCell id="s3" value="Hien thi thong bao loi (trung ma, thieu thong tin)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="990" y="760" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A6: Sua lai thong tin ===== -->
+        <mxCell id="a6" value="Sua lai thong tin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="270" y="880" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S4: Luu thong tin vao bang Profile (SV/GV) ===== -->
+        <mxCell id="s4" value="Luu thong tin vao bang Profile (SinhVien / GiaoVien)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1000" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S5: Tu dong tao Tai khoan dang nhap ===== -->
+        <mxCell id="s5" value="Tu dong tao Tai khoan dang nhap (Username = Ma, Password mac dinh)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1110" width="260" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S6: Sinh vien? (Decision) ===== -->
+        <mxCell id="s6" value="La Sinh vien?" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1220" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S7: Tu dong dang ky vao Lop Mon Hoc & Khoi tao Diem ===== -->
+        <mxCell id="s7" value="Tu dong dang ky vao Lop Mon Hoc va khoi tao Diem Mon Hoc" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1350" width="260" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== S8: Gui email thong bao tai khoan ===== -->
+        <mxCell id="s8" value="Gui email thong bao tai khoan cho nguoi dung" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1460" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== A7: Nhan thong bao thanh cong ===== -->
+        <mxCell id="a7" value="Nhan thong bao dang ky thanh cong" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1460" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ===== END NODE ===== -->
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#FFFFFF;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1560" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="end_inner" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="end">
+          <mxGeometry x="10" y="10" width="20" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- ===== EDGES ===== -->
+        <!-- Start -> A1 -->
+        <mxCell id="e0" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="start" target="a1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A1 -> A2 -->
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a1" target="a2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A2 -> A3a (Sinh vien) -->
+        <mxCell id="e2a" value="Sinh vien" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a2" target="a3a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A2 -> A3b (Giao vien) -->
+        <mxCell id="e2b" value="Giao vien" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a2" target="a3b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A3a -> merge1 -->
+        <mxCell id="e3a" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a3a" target="merge1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A3b -> merge1 -->
+        <mxCell id="e3b" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a3b" target="merge1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- merge1 -> A4 -->
+        <mxCell id="e4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="merge1" target="a4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A4 -> A5 -->
+        <mxCell id="e5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a4" target="a5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A5 -> S1 -->
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a5" target="s1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S1 -> S2 -->
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S2 -> S3 (Khong hop le) -->
+        <mxCell id="e8" value="Khong" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- S3 -> A6 (Admin sua lai) -->
+        <mxCell id="e9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s3" target="a6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="910" />
+              <mxPoint x="350" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- A6 -> A4 (Quay lai nhap) -->
+        <mxCell id="e10" value="Nhap lai" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="a6" target="a4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="910" />
+              <mxPoint x="200" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- S2 -> S4 (Hop le) -->
+        <mxCell id="e11" value="Co" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s2" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S4 -> S5 -->
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s4" target="s5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S5 -> S6 -->
+        <mxCell id="e13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s5" target="s6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S6 -> S7 (Co - la sinh vien) -->
+        <mxCell id="e14" value="Co" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s6" target="s7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S7 -> S8 -->
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s7" target="s8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- S6 -> S8 (Khong - la giao vien, bo qua dang ky lop) -->
+        <mxCell id="e16" value="Khong" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s6" target="s8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="1260" />
+              <mxPoint x="1020" y="1490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- S8 -> A7 -->
+        <mxCell id="e17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="s8" target="a7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- A7 -> End -->
+        <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;" edge="1" parent="1" source="a7" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

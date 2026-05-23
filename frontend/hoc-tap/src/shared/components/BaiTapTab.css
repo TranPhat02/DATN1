@@ -1,0 +1,153 @@
+/* BaiTapTab styles */
+
+.baitap-tab {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.baitap-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.baitap-folder-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-primary);
+  font-size: var(--font-size-lg);
+}
+
+.baitap-create-folder {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border-primary);
+}
+
+.baitap-create-folder .input {
+  flex: 1;
+  max-width: 300px;
+}
+
+.baitap-empty {
+  text-align: center;
+  padding: var(--space-8);
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.baitap-folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+.baitap-folder-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-5) var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.baitap-folder-card:hover {
+  border-color: var(--teams-accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.baitap-folder-icon {
+  font-size: 2.2rem;
+  color: var(--teams-accent);
+}
+
+.baitap-folder-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  font-size: var(--font-size-sm);
+  word-break: break-word;
+}
+
+.baitap-folder-date {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.baitap-folder-delete {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.baitap-folder-card:hover .baitap-folder-delete {
+  opacity: 1;
+}
+
+/* File list */
+.baitap-file-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.baitap-file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.15s;
+}
+
+.baitap-file-item:hover {
+  border-color: var(--teams-accent);
+}
+
+.baitap-file-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.baitap-file-icon {
+  font-size: 1.3rem;
+  color: var(--teams-accent);
+  flex-shrink: 0;
+}
+
+.baitap-file-name {
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.baitap-file-meta {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+.baitap-file-actions {
+  display: flex;
+  gap: var(--space-2);
+}

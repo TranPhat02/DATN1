@@ -1,0 +1,77 @@
+/* ═══════════════════════════════════════════════
+   KetQuaHocTap Styles
+   ═══════════════════════════════════════════════ */
+
+.kq-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-5);
+}
+
+.kq-card {
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.kq-card h4 {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-2);
+}
+
+.kq-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.kq-card--gpa .kq-value {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.kq-label {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+}
+
+/* ── Chart Section ── */
+.kq-charts-section {
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-6);
+}
+
+.kq-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--space-5);
+}
+
+.kq-chart-card {
+  padding: var(--space-5);
+}
+
+.kq-chart-title {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .kq-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Remove focus outline from chart wrappers ── */
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none !important;
+}

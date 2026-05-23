@@ -1,0 +1,121 @@
+/* ═══════════════════════════════════════════════
+   DataTable Styles
+   ═══════════════════════════════════════════════ */
+
+.data-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* ── Toolbar ── */
+.data-table-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.data-table-toolbar-left {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+}
+
+.data-table-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.data-table-count {
+  font-size: var(--font-size-sm);
+  color: var(--text-tertiary);
+  background: var(--bg-glass);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-secondary);
+}
+
+.data-table-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.data-table-toolbar-right .search-bar input {
+  min-width: 220px;
+}
+
+/* ── Table enhancements ── */
+.th-content {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.sort-icon {
+  font-size: 0.7rem;
+  color: var(--teams-accent);
+}
+
+.row-num {
+  font-size: var(--font-size-xs);
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.empty-cell {
+  text-align: center;
+  padding: var(--space-12) !important;
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.action-btns {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.action-delete:hover {
+  color: var(--danger-400) !important;
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* ── Pagination ── */
+.data-table-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+}
+
+.pagination-info {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.pagination-btns {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .data-table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .data-table-toolbar-right {
+    flex-wrap: wrap;
+  }
+  .data-table-toolbar-right .search-bar input {
+    min-width: auto;
+  }
+}

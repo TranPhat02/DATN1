@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2024-04-30T00:00:00.000Z" agent="Mozilla/5.0" version="22.0.4" type="device">
+  <diagram id="admin-usecase" name="Admin">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- System Boundary -->
+        <mxCell id="sys_bnd" value="Hệ thống - Phân hệ Admin" style="shape=rect;verticalAlign=top;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="700" height="950" as="geometry" />
+        </mxCell>
+        
+        <!-- Actor -->
+        <mxCell id="admin" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="40" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- Use Case Groups -->
+        <!-- 1. Hệ thống & Tài khoản -->
+        <mxCell id="uc_login" value="Đăng nhập" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_logout" value="Đăng xuất" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="40" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_changepw" value="Đổi mật khẩu" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 2. Quản lý Danh mục -->
+        <mxCell id="uc_namhoc" value="Quản lý Năm học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_hocky" value="Quản lý Học kỳ" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_khoahoc" value="Quản lý Khóa học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="300" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_monhoc" value="Quản lý Môn học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="360" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 3. Quản lý Đào tạo -->
+        <mxCell id="uc_lop" value="Quản lý Lớp" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="440" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_lopmonhoc" value="Quản lý Lớp môn học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="500" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_sv_lopmonhoc" value="Quản lý Sinh viên - Lớp môn học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="500" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_lichhoc" value="Quản lý Lịch học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="560" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_autolich" value="Auto-generate Lịch học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="500" y="560" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 4. Quản lý Người dùng -->
+        <mxCell id="uc_giaovien" value="Quản lý Giáo viên" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="640" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_sinhvien" value="Quản lý Sinh viên" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="700" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_taikhoan" value="Quản lý Tài khoản" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="300" y="760" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 5. Điểm số & Tài liệu & Nhập Xuất -->
+        <mxCell id="uc_diemmonhoc" value="Quản lý Điểm môn học" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_diemtracnghiem" value="Quản lý Điểm trắc nghiệm" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="300" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_tailieu" value="Quản lý Tài liệu hệ thống" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="380" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_import" value="Nhập dữ liệu (CSV/Excel)" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="640" width="160" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_export" value="Xuất báo cáo" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+          <mxGeometry x="720" y="700" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Extend/Include Relationships -->
+        <mxCell id="e_inc1" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_logout" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_inc2" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_changepw" target="uc_login">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ext1" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_sv_lopmonhoc" target="uc_lopmonhoc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ext2" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_autolich" target="uc_lichhoc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="e_ext3" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_import" target="uc_sinhvien">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ext4" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_import" target="uc_lichhoc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ext5" value="&lt;&lt;extend&gt;&gt;" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="uc_import" target="uc_lop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin Associations -->
+        <mxCell id="a1" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_login"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a2" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_namhoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a3" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_hocky"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a4" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_khoahoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a5" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_monhoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        
+        <mxCell id="a6" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_lop"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a7" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_lopmonhoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a8" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_lichhoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        
+        <mxCell id="a9" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_giaovien"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a10" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_sinhvien"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a11" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_taikhoan"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="a12" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_diemmonhoc"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a13" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_diemtracnghiem"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a14" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_tailieu"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a15" style="edgeStyle=none;html=1;strokeColor=#FFFFFF;fontColor=#FFFFFF;endArrow=none;" edge="1" parent="1" source="admin" target="uc_export"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

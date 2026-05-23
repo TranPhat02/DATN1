@@ -1,0 +1,54 @@
+/* ═══════════════════════════════════════════════
+   ClassroomDetail Styles (Shared by teacher & student)
+   ═══════════════════════════════════════════════ */
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.detail-tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-primary);
+  overflow-x: auto;
+  padding-bottom: 0;
+}
+
+.detail-tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+}
+
+.detail-tab:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.detail-tab--active {
+  color: var(--teams-accent);
+  border-bottom-color: var(--teams-accent);
+  font-weight: 600;
+}
+
+.detail-tab--active svg {
+  color: var(--teams-accent);
+}
+
+.detail-content {
+  min-height: 300px;
+}

@@ -1,0 +1,36 @@
+{
+    "qid":"123",
+    "questions": [
+        {
+
+            "id":"1234",
+            "name": "AI là gì",
+            "descriptions": "abc", 
+            "Values": [
+                {
+                    "answer": "Là máy tính",
+                    "true": true
+                },
+                {
+                    "answer": "Là con người",
+                    "true": false
+                },
+                {
+                    "answer": "Là thực vật",
+                    "true": false
+                }
+            ]
+        }
+    ]
+}
+
+hs
+{
+    "qid":"123",
+    "questions":[
+        {
+            "1234": 0 
+        }
+
+    ]
+}

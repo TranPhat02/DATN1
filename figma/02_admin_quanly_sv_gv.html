@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý SV & GV — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon" title="Dashboard">📊</div>
+    <div class="rail-icon active" title="Quản lý">👥</div>
+    <div class="rail-icon" title="Lịch học">📅</div>
+    <div class="rail-icon" title="Tài liệu">📁</div>
+    <div class="rail-icon" title="Thông báo">🔔</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Quản trị</div>
+    <div class="panel-item">📊 Dashboard</div>
+    <div class="panel-item active">👨‍🎓 Sinh viên</div>
+    <div class="panel-item">👨‍🏫 Giáo viên</div>
+    <div class="panel-item">🏫 Lớp</div>
+    <div class="panel-item">📚 Môn học</div>
+    <div class="panel-item">📖 Lớp Môn Học</div>
+    <div class="panel-item">📅 Lịch học</div>
+    <div class="panel-item">📁 Tài liệu</div>
+    <div class="panel-item">🔔 Thông báo</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right">
+        <span class="notif">🔔</span>
+        <div class="avatar">A</div>
+        <span style="font-size:.8125rem;color:#d6d6d6">Admin</span>
+      </div>
+    </div>
+    <div class="main">
+      <!-- SINH VIÊN -->
+      <div class="page-header"><h1 class="page-title">Quản lý Sinh viên</h1></div>
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="tbl-title">Sinh viên</span>
+          <span class="data-count">2 bản ghi</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-bar"><span class="icon">🔍</span><input class="input" placeholder="Tìm kiếm..." style="width:200px"></div>
+          <button class="btn btn-secondary btn-sm">📥 Import CSV</button>
+          <button class="btn btn-secondary btn-sm">📤 Export CSV</button>
+          <button class="btn btn-primary btn-sm">＋ Thêm</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>#</th><th>Mã SV</th><th>Tên sinh viên</th><th>Giới tính</th><th>Ngày sinh</th><th>Địa chỉ</th><th>Mã lớp</th><th>Khóa</th><th>Gmail</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr><td class="row-num">1</td><td>SV001</td><td>Nguyễn Văn An</td><td>Nam</td><td>15/03/2003</td><td>123 Lê Lợi, Q.1</td><td>CNTT01</td><td>K20</td><td>an.nv@gmail.com</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+            <tr><td class="row-num">2</td><td>SV002</td><td>Trần Thị Bình</td><td>Nữ</td><td>22/07/2003</td><td>456 Nguyễn Huệ, Q.3</td><td>CNTT01</td><td>K20</td><td>binh.tt@gmail.com</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="section-sep">
+
+      <!-- GIÁO VIÊN -->
+      <div class="page-header"><h1 class="page-title">Quản lý Giáo viên</h1></div>
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <span class="tbl-title">Giáo viên</span>
+          <span class="data-count">2 bản ghi</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-bar"><span class="icon">🔍</span><input class="input" placeholder="Tìm kiếm..." style="width:200px"></div>
+          <button class="btn btn-secondary btn-sm">📥 Import CSV</button>
+          <button class="btn btn-secondary btn-sm">📤 Export CSV</button>
+          <button class="btn btn-primary btn-sm">＋ Thêm</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>#</th><th>Mã GV</th><th>Tên giáo viên</th><th>Giới tính</th><th>Ngày sinh</th><th>Địa chỉ</th><th>Gmail</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr><td class="row-num">1</td><td>GV001</td><td>Lê Minh Cường</td><td>Nam</td><td>10/05/1985</td><td>789 Trần Hưng Đạo, Q.5</td><td>cuong.lm@gmail.com</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+            <tr><td class="row-num">2</td><td>GV002</td><td>Phạm Thị Dung</td><td>Nữ</td><td>28/11/1990</td><td>321 Võ Văn Tần, Q.3</td><td>dung.pt@gmail.com</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">✏️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

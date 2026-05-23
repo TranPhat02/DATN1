@@ -1,0 +1,379 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
+  <diagram id="seq-quiz-ai" name="Sequence - Tao Quiz AI">
+    <mxGraphModel dx="1028" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1300" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;fontSize=16;fontStyle=1;" value="So do Sequence - Tao bai trac nghiem AI (Gemini RAG)" vertex="1">
+          <mxGeometry height="30" width="450" x="420" y="1200" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Giao vien" vertex="1">
+          <mxGeometry height="55" width="30" x="60" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" parent="1" style="line;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="1080" width="1" x="74" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" parent="1" style="whiteSpace=wrap;html=1;" value="Giao dien" vertex="1">
+          <mxGeometry height="30" width="90" x="225" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" parent="1" style="line;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="269" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="1020" width="10" x="265" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" parent="1" style="whiteSpace=wrap;html=1;" value="He thong" vertex="1">
+          <mxGeometry height="30" width="90" x="475" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" parent="1" style="line;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="519" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="910" width="10" x="515" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" parent="1" style="whiteSpace=wrap;html=1;" value="Co so du lieu" vertex="1">
+          <mxGeometry height="30" width="90" x="725" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" parent="1" style="line;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="769" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="700" width="10" x="765" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" parent="1" style="whiteSpace=wrap;html=1;" value="Gemini AI" vertex="1">
+          <mxGeometry height="30" width="90" x="975" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="l5" parent="1" style="line;strokeWidth=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="1019" y="85" as="geometry" />
+        </mxCell>
+        <mxCell id="act5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="280" width="10" x="1015" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="1. Chon file tai lieu va so cau hoi">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="75" y="150" as="sourcePoint" />
+            <mxPoint x="269" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="2. POST /api/v1/quiz/generate {file_id, ma_lop_mon, num_questions}">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="200" as="sourcePoint" />
+            <mxPoint x="519" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="3. Cau hinh Gemini API key">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="250" as="sourcePoint" />
+            <mxPoint x="610" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="4. Tai file tu Google Drive (get_content_for_quiz_ai)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="300" as="sourcePoint" />
+            <mxPoint x="769" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="5. Tra ve noi dung file (PDF/DOCX/PPTX)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="769" y="340" as="sourcePoint" />
+            <mxPoint x="520" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="6. Trich xuat text (PyPDF2/docx/pptx)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="390" as="sourcePoint" />
+            <mxPoint x="610" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grp1" parent="1" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;" value="[Document Memory - Luu tom tat]" vertex="1">
+          <mxGeometry height="170" width="560" x="500" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="m6" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="7. Kiem tra memory (content.md) tu Drive">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="480" as="sourcePoint" />
+            <mxPoint x="769" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="8. Gui text toi Gemini de tao tom tat">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="530" as="sourcePoint" />
+            <mxPoint x="1019" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m7b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="Tom tat noi dung tai lieu">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1019" y="560" as="sourcePoint" />
+            <mxPoint x="520" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grp2" parent="1" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;" value="[Quiz Generation - 70/30 Strategy]" vertex="1">
+          <mxGeometry height="170" width="560" x="500" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="9. Tai quiz pool (quiz.md) tu memory">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="670" as="sourcePoint" />
+            <mxPoint x="769" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="10. Gui prompt tao cau hoi trac nghiem">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="720" as="sourcePoint" />
+            <mxPoint x="1019" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m9b" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="JSON array cau hoi + dap an">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1019" y="750" as="sourcePoint" />
+            <mxPoint x="520" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m10" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="11. Tao quiz document (id, title, questions, lockType=1)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="830" as="sourcePoint" />
+            <mxPoint x="610" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m11" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="12. Luu quiz vao MongoDB">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="880" as="sourcePoint" />
+            <mxPoint x="769" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m12" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;dashed=1;" value="13. Luu quiz JSON len Drive (/quiz/)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="930" as="sourcePoint" />
+            <mxPoint x="769" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m13" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="14. Tra ve quiz data">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="519" y="990" as="sourcePoint" />
+            <mxPoint x="270" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m14" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#FFFFFF;fontSize=11;" value="15. Hien thi quiz vua tao (trang thai: Da khoa)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="269" y="1050" as="sourcePoint" />
+            <mxPoint x="75" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="bFKsoj2uuTGEXnvsbNUM" name="Page-2">
+    <mxGraphModel dx="1028" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-26" parent="1" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;fontColor=#000000;" value="[Tạo trắc nghiệm]" vertex="1">
+          <mxGeometry height="170" width="535" x="605" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-22" parent="1" style="shape=mxgraph.sequence.fragment;whiteSpace=wrap;html=1;fontSize=11;align=left;verticalAlign=top;spacingLeft=5;fontColor=#000000;" value="[Lưu tóm tắt]" vertex="1">
+          <mxGeometry height="170" width="540" x="600" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-13" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="155" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontColor=#000000;" value="Giao vien" vertex="1">
+          <mxGeometry height="55" width="30" x="140" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-3" parent="1" style="line;strokeWidth=1;dashed=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1080" width="1" x="154" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-12" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-4" parent="1" style="whiteSpace=wrap;html=1;fontColor=#000000;" value="Giao dien" vertex="1">
+          <mxGeometry height="30" width="90" x="305" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-5" parent="1" style="line;strokeWidth=1;dashed=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="349" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1020" width="10" x="345" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-10" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-7" parent="1" style="whiteSpace=wrap;html=1;fontColor=#000000;" value="He thong" vertex="1">
+          <mxGeometry height="30" width="90" x="555" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-8" parent="1" style="line;strokeWidth=1;dashed=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="599" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="910" width="10" x="595" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-9" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="1531" />
+            </Array>
+            <mxPoint x="850" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-10" parent="1" style="whiteSpace=wrap;html=1;fontColor=#000000;" value="Co so du lieu" vertex="1">
+          <mxGeometry height="30" width="90" x="805" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-11" parent="1" style="line;strokeWidth=1;dashed=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="849" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="210" width="10" x="845" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-7" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=none;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="1570" />
+            </Array>
+            <mxPoint x="1100" y="1580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-13" parent="1" style="whiteSpace=wrap;html=1;fontColor=#000000;" value="Gemini AI" vertex="1">
+          <mxGeometry height="30" width="90" x="1050" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-14" parent="1" style="line;strokeWidth=1;dashed=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1095" width="1" x="1099" y="475" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="280" width="10" x="1095" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="1. Chọn file để tạo câu hỏi">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="155" y="540" as="sourcePoint" />
+            <mxPoint x="349" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="2. Gửi yêu cầu về hệ thống">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="350" y="590" as="sourcePoint" />
+            <mxPoint x="599" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;entryX=0.26;entryY=0.107;entryDx=0;entryDy=0;entryPerimeter=0;" target="1LH_mFIuGK_n4PGD-9Y4-9" value="3. Lấy cấu hình Gemini API key">
+          <mxGeometry relative="1" x="-0.1552" y="-10" as="geometry">
+            <mxPoint x="10" y="-10" as="offset" />
+            <Array as="points">
+              <mxPoint x="680" y="640" />
+              <mxPoint x="680" y="667" />
+            </Array>
+            <mxPoint x="600" y="640" as="sourcePoint" />
+            <mxPoint x="670" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="4. Tải file từ Google Drive&amp;nbsp;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="690" as="sourcePoint" />
+            <mxPoint x="849" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="5. Trả về nội dung file">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="849" y="730" as="sourcePoint" />
+            <mxPoint x="600" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-21" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="6. Trích xuất text">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="600" y="780" as="sourcePoint" />
+            <mxPoint x="850" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="7. Kiểm tra memory từ Drive">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="870" as="sourcePoint" />
+            <mxPoint x="849" y="870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="8. Gửi text đến gemini để tóm tắt">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="920" as="sourcePoint" />
+            <mxPoint x="1099" y="920" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="Tóm tắt lại nội dung dữ liệu">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1099" y="950" as="sourcePoint" />
+            <mxPoint x="600" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="9. Lấy dữ liệu từ memory">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="1060" as="sourcePoint" />
+            <mxPoint x="849" y="1060" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="10. Tạo trắc nghiệm theo số câu hỏi">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="1110" as="sourcePoint" />
+            <mxPoint x="1099" y="1110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="JSON array câu hỏi và đáp án">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1099" y="1140" as="sourcePoint" />
+            <mxPoint x="600" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-30" edge="1" parent="1" source="1LH_mFIuGK_n4PGD-9Y4-9" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;entryX=1.38;entryY=0.737;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.3;exitY=0.698;exitDx=0;exitDy=0;exitPerimeter=0;" target="1LH_mFIuGK_n4PGD-9Y4-9" value="11. Tao trắc nghiệm">
+          <mxGeometry relative="1" x="-0.3079" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="680" y="1205" />
+              <mxPoint x="680" y="1241" />
+            </Array>
+            <mxPoint x="645" y="1210" as="sourcePoint" />
+            <mxPoint x="720" y="1250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="12. Lưu trắc nghiệm vào MongoDB">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="1270" as="sourcePoint" />
+            <mxPoint x="849" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-32" edge="1" parent="1" source="MNzvCkNhMxVX7ZZttdaV-3" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;dashed=1;" value="13. Lưu trắc nghiệm JSON lên Drive">
+          <mxGeometry relative="1" x="0.881" y="119" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="600" y="1320" as="sourcePoint" />
+            <mxPoint x="849" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="14. Tra ve trắc nghiệm dữ liệu">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="599" y="1380" as="sourcePoint" />
+            <mxPoint x="350" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1LH_mFIuGK_n4PGD-9Y4-34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="15. Hiển thị trắc nghiệm vừa tạo">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="349" y="1440" as="sourcePoint" />
+            <mxPoint x="155" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="1020" width="10" x="149.5" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="845" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-4" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;dashed=1;entryX=0.35;entryY=0.856;entryDx=0;entryDy=0;entryPerimeter=0;" target="MNzvCkNhMxVX7ZZttdaV-3" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="1320" as="sourcePoint" />
+            <mxPoint x="849" y="1320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MNzvCkNhMxVX7ZZttdaV-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#000000;" value="" vertex="1">
+          <mxGeometry height="140" width="10" x="844.5" y="1200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

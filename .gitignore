@@ -1,0 +1,73 @@
+# ===========================
+# SENSITIVE / CREDENTIALS
+# ===========================
+# Environment variables (chứa DB password, JWT secret, API keys, SMTP password)
+.env
+.env.*
+!.env.example
+
+# Google Service Account / OAuth credentials
+*.json.bak
+cntt-491408-271a3f6050bc.json
+oauth_client.json
+drive_token.json
+backend/tn/drive_token.json
+
+# ===========================
+# PYTHON
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ===========================
+# NODE / FRONTEND
+# ===========================
+node_modules/
+dist/
+.cache/
+*.tsbuildinfo
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+logs/
+
+# ===========================
+# IDE / EDITOR
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===========================
+# MISC
+# ===========================
+*.bak
+*.tmp
+*.temp

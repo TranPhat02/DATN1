@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý Tài liệu — Admin</title>
+<link rel="stylesheet" href="figma-common.css">
+</head>
+<body>
+<div class="shell">
+  <div class="rail">
+    <div class="rail-icon">📊</div><div class="rail-icon">👥</div><div class="rail-icon">📅</div><div class="rail-icon active">📁</div><div class="rail-icon">🔔</div>
+  </div>
+  <div class="panel">
+    <div class="panel-header">Quản trị</div>
+    <div class="panel-item">📊 Dashboard</div><div class="panel-item">👨‍🎓 Sinh viên</div><div class="panel-item">👨‍🏫 Giáo viên</div>
+    <div class="panel-item">📖 Lớp Môn Học</div><div class="panel-item">📅 Lịch học</div>
+    <div class="panel-item active">📁 Tài liệu</div><div class="panel-item">🔔 Thông báo</div>
+  </div>
+  <div class="content">
+    <div class="header">
+      <div class="header-left">Hệ thống Quản lý Đào tạo</div>
+      <div class="header-right"><span class="notif">🔔</span><div class="avatar">A</div><span style="font-size:.8125rem;color:#d6d6d6">Admin</span></div>
+    </div>
+    <div class="main">
+      <!-- Breadcrumb -->
+      <div class="toolbar">
+        <div class="toolbar-left" style="flex-direction:column;align-items:flex-start;gap:4px">
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="font-size:1rem;font-weight:600;cursor:pointer">📁 Gốc Drive</span>
+            <span style="color:#64748b">/</span>
+            <span style="font-weight:600;color:#f1f5f9">Lập trình Web</span>
+          </div>
+          <span class="data-count">1 thư mục • 2 tài liệu</span>
+        </div>
+        <div class="toolbar-right">
+          <div class="search-bar"><span class="icon">🔍</span><input class="input" placeholder="Tìm tài liệu..." style="width:200px"></div>
+          <button class="btn btn-primary btn-sm">☁️ Tải lên</button>
+        </div>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead><tr><th>#</th><th>Tên</th><th>Loại</th><th>Kích thước</th><th>Người tạo</th><th>Ngày tạo</th><th>Thao tác</th></tr></thead>
+          <tbody>
+            <tr style="cursor:pointer"><td class="row-num">1</td><td><div class="file-row"><span class="file-icon">📁</span><span class="folder-name">Bài giảng</span></div></td><td style="color:#64748b;font-size:.75rem">Thư mục</td><td>—</td><td style="color:#94a3b8;font-size:.75rem">Lê Minh Cường</td><td style="font-size:.75rem">10/03/2025</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">👁</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+            <tr><td class="row-num">2</td><td><div class="file-row"><span style="color:#94a3b8">📄</span><span>Slide_Chuong1.pptx</span></div></td><td style="color:#64748b;font-size:.75rem">presentation</td><td style="font-size:.75rem">2.3 MB</td><td style="color:#94a3b8;font-size:.75rem">Lê Minh Cường</td><td style="font-size:.75rem">12/03/2025</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">👁</button><button class="btn btn-ghost btn-icon btn-sm">⬇️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+            <tr><td class="row-num">3</td><td><div class="file-row"><span style="color:#94a3b8">📄</span><span>Baitap_HTML_CSS.pdf</span></div></td><td style="color:#64748b;font-size:.75rem">pdf</td><td style="font-size:.75rem">856 KB</td><td style="color:#94a3b8;font-size:.75rem">Lê Minh Cường</td><td style="font-size:.75rem">15/03/2025</td><td><div class="action-btns"><button class="btn btn-ghost btn-icon btn-sm">👁</button><button class="btn btn-ghost btn-icon btn-sm">⬇️</button><button class="btn btn-ghost btn-icon btn-sm action-delete">🗑</button></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

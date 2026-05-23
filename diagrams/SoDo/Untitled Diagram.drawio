@@ -1,0 +1,124 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2" pages="2">
+  <diagram name="Page-1" id="uUS86qgVLoR4o3CG2_sb">
+    <mxGraphModel dx="1028" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-9" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hUmDTxAxgB3PLXmc9M7a-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Tài liệu" vertex="1">
+          <mxGeometry height="60" width="120" x="90" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-10" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hUmDTxAxgB3PLXmc9M7a-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Google drive" vertex="1">
+          <mxGeometry height="60" width="120" x="365" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-12" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hUmDTxAxgB3PLXmc9M7a-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-13" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" target="hUmDTxAxgB3PLXmc9M7a-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Plant text" vertex="1">
+          <mxGeometry height="60" width="120" x="610" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Content.md" vertex="1">
+          <mxGeometry height="60" width="120" x="770" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-15" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="hUmDTxAxgB3PLXmc9M7a-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-16" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" target="hUmDTxAxgB3PLXmc9M7a-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1130" y="270" />
+              <mxPoint x="1130" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Câu hỏi Json" vertex="1">
+          <mxGeometry height="60" width="120" x="980" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-22" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" target="hUmDTxAxgB3PLXmc9M7a-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="180" />
+              <mxPoint x="1040" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="quiz.md" vertex="1">
+          <mxGeometry height="60" width="120" x="1260" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="MongoDB" vertex="1">
+          <mxGeometry height="60" width="120" x="1210" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-14" edge="1" parent="1" source="hUmDTxAxgB3PLXmc9M7a-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" target="hUmDTxAxgB3PLXmc9M7a-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1051" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Download+ Extract&lt;span class=&quot;Yjhzub&quot; data-sfc-root=&quot;c&quot; data-sfc-cb=&quot;&quot; data-complete=&quot;true&quot; data-copy-service-computed-style=&quot;font-family: &amp;quot;Google Sans&amp;quot;, Arial, sans-serif; font-size: 16px; font-weight: 600; margin: 0px; text-decoration: none; border-bottom: 0px rgb(230, 232, 240);&quot; style=&quot;font-family: &amp;quot;Google Sans&amp;quot;, Arial, sans-serif; font-size: 16px; font-weight: 600; margin: 0px; border-bottom: 0px rgb(230, 232, 240);&quot;&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="485" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Upload" vertex="1">
+          <mxGeometry height="30" width="60" x="230" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tóm tắt" vertex="1">
+          <mxGeometry height="30" width="60" x="630" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tạo" vertex="1">
+          <mxGeometry height="30" width="60" x="800" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Context" vertex="1">
+          <mxGeometry height="30" width="60" x="950" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Lưu" vertex="1">
+          <mxGeometry height="30" width="60" x="1170" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="70% random" vertex="1">
+          <mxGeometry height="30" width="80" x="1140" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="hUmDTxAxgB3PLXmc9M7a-25" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Lưu" vertex="1">
+          <mxGeometry height="30" width="60" x="1130" y="360" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="TfcVOxiS9CKj7ARv01ls" name="Page-2">
+    <mxGraphModel dx="1028" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-5" edge="1" parent="1" source="_1fUWNi8WSjcaLWwfj5D-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="_1fUWNi8WSjcaLWwfj5D-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Client&lt;div&gt;(Reactjs+Vitejs)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="150" x="110" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-6" edge="1" parent="1" source="_1fUWNi8WSjcaLWwfj5D-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="_1fUWNi8WSjcaLWwfj5D-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Server&lt;div&gt;(FastAPI)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="150" x="370" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-7" edge="1" parent="1" source="_1fUWNi8WSjcaLWwfj5D-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="_1fUWNi8WSjcaLWwfj5D-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="External Service&lt;div&gt;Google Gemini API&lt;/div&gt;&lt;div&gt;Google Drive&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="150" x="370" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="_1fUWNi8WSjcaLWwfj5D-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Data&lt;div&gt;(MySQL+ MongoDB)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="150" x="660" y="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
