@@ -43,12 +43,12 @@ def export_mysql(backup_dir):
 
 def export_mongodb(backup_dir):
     print("\n--- Exporting MongoDB ---")
-    mongo_uri = "mongodb://localhost:27017"
+    mongo_uri = "mongodb+srv://phattran2662002_db_user:123@cluster0.getdpyg.mongodb.net/"
     db_name = "tn_db"
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    mongo_filename = f"mongodb_backup_{timestamp}.json"
-    mongo_filepath = os.path.join(backup_dir, mongo_filename)
+    # Create a subfolder for MongoDB collections
+    mongo_subfolder = os.path.join(backup_dir, f"mongodb_backup_{timestamp}")
     
     try:
         client = MongoClient(mongo_uri)
@@ -58,22 +58,28 @@ def export_mongodb(backup_dir):
         collections = db.list_collection_names()
         print(f"Found {len(collections)} collections in MongoDB database '{db_name}': {collections}")
         
-        backup_data = {}
+        if not os.path.exists(mongo_subfolder):
+            os.makedirs(mongo_subfolder)
+            print(f"Created subfolder for MongoDB collections: {mongo_subfolder}")
+            
+        exported_files = []
         for coll_name in collections:
             coll = db[coll_name]
             documents = list(coll.find({}))
-            print(f"  - Collection '{coll_name}': {len(documents)} documents")
-            # We dump using bson.json_util to preserve BSON types
-            backup_data[coll_name] = documents
+            print(f"  - Exporting collection '{coll_name}': {len(documents)} documents")
             
-        # Write to JSON file
-        with open(mongo_filepath, 'w', encoding='utf-8') as f:
-            # bson.json_util.dumps serializes documents to JSON in MongoDB Extended JSON format
-            f.write(json_util.dumps(backup_data, indent=2))
+            coll_filename = f"{coll_name}.json"
+            coll_filepath = os.path.join(mongo_subfolder, coll_filename)
             
-        print(f"[SUCCESS] MongoDB database '{db_name}' exported successfully to:")
-        print(f"  -> {mongo_filepath}")
-        return mongo_filepath
+            # Write this collection to its own JSON file
+            with open(coll_filepath, 'w', encoding='utf-8') as f:
+                f.write(json_util.dumps(documents, indent=2))
+            
+            exported_files.append(coll_filepath)
+            
+        print(f"[SUCCESS] MongoDB database '{db_name}' exported successfully to subfolder:")
+        print(f"  -> {mongo_subfolder}")
+        return mongo_subfolder
     except Exception as e:
         print(f"[ERROR] Failed to export MongoDB: {e}")
         return None

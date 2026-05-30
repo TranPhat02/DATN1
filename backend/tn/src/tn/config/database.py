@@ -14,6 +14,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 # ──────────────────────────────────────────────
 class Settings(BaseSettings):
     MYSQL_URL: str = "mysql+pymysql://admin:123456@localhost:3308/tn"
+    MYSQL_SSL: bool = False
+    MYSQL_SSL_CA: str = ""
     MONGO_URL: str = "mongodb://localhost:27017"
     MONGO_DB_NAME: str = "tn_db"
 
@@ -46,7 +48,15 @@ settings = Settings()
 # ──────────────────────────────────────────────
 #  MySQL — SQLAlchemy
 # ──────────────────────────────────────────────
-engine = create_engine(settings.MYSQL_URL, echo=True)
+connect_args = {}
+if settings.MYSQL_SSL:
+    ssl_dict = {}
+    if settings.MYSQL_SSL_CA:
+        ssl_dict["ssl_ca"] = settings.MYSQL_SSL_CA
+    ssl_dict["check_hostname"] = False
+    connect_args["ssl"] = ssl_dict
+
+engine = create_engine(settings.MYSQL_URL, connect_args=connect_args, echo=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 

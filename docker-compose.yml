@@ -15,9 +15,10 @@ services:
     env_file:
       - .env.docker
     environment:
-      # host.docker.internal = IP máy host từ trong Docker container
-      MYSQL_URL: mysql+pymysql://admin:123456@host.docker.internal:3308/tn
-      MONGO_URL: mongodb://host.docker.internal:27017
+      MYSQL_URL: ${MYSQL_URL}
+      MYSQL_SSL: "True"
+      MYSQL_SSL_CA: /app/certs/ca.pem
+      MONGO_URL: mongodb+srv://phattran2662002_db_user:123@cluster0.getdpyg.mongodb.net/
       MONGO_DB_NAME: tn_db
       GOOGLE_DRIVE_CREDENTIALS_FILE: /app/credentials/credentials.json
     extra_hosts:
@@ -27,6 +28,7 @@ services:
     volumes:
       - ./cntt-491408-271a3f6050bc.json:/app/credentials/credentials.json:ro
       - ./backend/tn/drive_token.json:/app/drive_token.json:rw
+      - ./backend/tn/certs:/app/certs:ro
 
   # ── Frontend (React + Nginx) ──
   frontend:
