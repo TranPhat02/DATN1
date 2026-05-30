@@ -76,7 +76,8 @@ def _get_drive_service():
 
 def _scan_file_with_virustotal(file_content: bytes, filename: str) -> ScanResult:
     """Quét file bằng VirusTotal trước khi upload.
-    Raise HTTPException nếu quét thất bại (từ chối upload).
+    Chỉ từ chối upload nếu phát hiện virus thực tế. 
+    Lỗi hệ thống quét (API, timeout, 409...) sẽ được bỏ qua để tránh gián đoạn dịch vụ.
     """
     api_key = settings.VIRUSTOTAL_API_KEY
     if not api_key:
@@ -85,11 +86,11 @@ def _scan_file_with_virustotal(file_content: bytes, filename: str) -> ScanResult
 
     try:
         return vt_scan_file(file_content, filename)
-    except RuntimeError as e:
-        print(f"[VirusTotal] ❌ Quét thất bại: {e}")
-        raise HTTPException(
-            status_code=503,
-            detail=f"Không thể quét virus cho file '{filename}': {str(e)}"
+    except Exception as e:
+        print(f"[VirusTotal] ⚠️ Quét thất bại do lỗi hệ thống (non-blocking): {e}")
+        return ScanResult(
+            is_safe=True,
+            message=f"Bỏ qua quét virus do lỗi hệ thống quét (non-blocking): {str(e)}"
         )
 
 

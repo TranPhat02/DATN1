@@ -1,0 +1,43 @@
+# ============================================
+# TN Education Platform — Docker Compose
+# Sử dụng MySQL & MongoDB bên ngoài (trên máy host)
+# Run: docker compose up -d
+# ============================================
+
+services:
+  # ── Backend (FastAPI) ──
+  backend:
+    build:
+      context: ./backend/tn
+      dockerfile: Dockerfile
+    container_name: tn-backend
+    restart: unless-stopped
+    env_file:
+      - .env.docker
+    environment:
+      # host.docker.internal = IP máy host từ trong Docker container
+      MYSQL_URL: mysql+pymysql://admin:123456@host.docker.internal:3308/tn
+      MONGO_URL: mongodb://host.docker.internal:27017
+      MONGO_DB_NAME: tn_db
+      GOOGLE_DRIVE_CREDENTIALS_FILE: /app/credentials/credentials.json
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./cntt-491408-271a3f6050bc.json:/app/credentials/credentials.json:ro
+      - ./backend/tn/drive_token.json:/app/drive_token.json:rw
+
+  # ── Frontend (React + Nginx) ──
+  frontend:
+    build:
+      context: ./frontend/hoc-tap
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api/v1
+    container_name: tn-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend

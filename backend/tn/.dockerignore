@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+drive_token.json
+*.log
+scratch/
+tests/
+.git/
+.venv/
+venv/
+*.egg-info/

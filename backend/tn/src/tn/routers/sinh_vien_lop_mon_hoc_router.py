@@ -29,7 +29,7 @@ def list_by_sv(
     Students can only fetch their own data (username == MaSV).
     Admins/teachers can fetch any student.
     """
-    if current_user.Role == "student" and current_user.UserName != ma_sv:
+    if current_user.Role == "student" and current_user.UserName.upper() != ma_sv.upper():
         from fastapi import HTTPException
         raise HTTPException(status_code=403, detail="Không có quyền xem dữ liệu của sinh viên khác")
     from tn.models.sinh_vien_lop_mon_hoc import SinhVienLopMonHoc
@@ -142,7 +142,7 @@ def sync_enrollment(
     from tn.models.diem_mon_hoc import DiemMonHoc
 
     # Security: student can only sync their own data
-    if current_user.Role == "student" and current_user.UserName != ma_sv:
+    if current_user.Role == "student" and current_user.UserName.upper() != ma_sv.upper():
         raise HTTPException(status_code=403, detail="Không có quyền sync dữ liệu của sinh viên khác")
 
     # Look up student

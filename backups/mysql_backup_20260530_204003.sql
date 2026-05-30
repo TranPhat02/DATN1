@@ -1,0 +1,409 @@
+-- MySQL dump 10.13  Distrib 8.4.8, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: tn
+-- ------------------------------------------------------
+-- Server version	8.4.8
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `diemmonhoc`
+--
+
+DROP TABLE IF EXISTS `diemmonhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `diemmonhoc` (
+  `MaDiem` varchar(20) NOT NULL,
+  `MaSV` varchar(20) DEFAULT NULL,
+  `MaLopMon` varchar(20) DEFAULT NULL,
+  `DiemGK` float DEFAULT NULL,
+  `DiemCK` float DEFAULT NULL,
+  `DiemTK` float DEFAULT NULL,
+  `DiemH4` float DEFAULT NULL,
+  `DiemChu` varchar(5) DEFAULT NULL,
+  `GhiChu` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`MaDiem`),
+  KEY `MaSV` (`MaSV`),
+  KEY `MaLopMon` (`MaLopMon`),
+  CONSTRAINT `diemmonhoc_ibfk_1` FOREIGN KEY (`MaSV`) REFERENCES `sinhvien` (`MaSV`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `diemmonhoc_ibfk_2` FOREIGN KEY (`MaLopMon`) REFERENCES `lopmonhoc` (`MaLopMon`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `diemmonhoc`
+--
+
+LOCK TABLES `diemmonhoc` WRITE;
+/*!40000 ALTER TABLE `diemmonhoc` DISABLE KEYS */;
+INSERT INTO `diemmonhoc` VALUES ('D00C24AB80AEE','SV26040115460848','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D02AB2359D601','SV26032821181078','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D03F6C65F8AF3','SV26040115460848','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('D05D9B482D7C5','SV26041416422611','LM26041501105813',NULL,NULL,NULL,NULL,NULL,NULL),('D140FC541D052','SV26041416422395','LM26041501105832',NULL,NULL,NULL,NULL,NULL,NULL),('D17F27100789A','SV26041416422786','LM26041501105813',NULL,NULL,NULL,NULL,NULL,NULL),('D1CDFF90F8BA1','SV26041416422703','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('D2373D1F7033E','SV26041416422349','LM26041501105832',NULL,NULL,NULL,NULL,NULL,NULL),('D253DC773A811','SV26041416422440','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D2E43F731FAAD','SV26041416422395','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('D36DC003FAE98','SV26041416423036','LM26051603134754',NULL,NULL,NULL,NULL,NULL,NULL),('D3A491EEFAE77','SV26041416422994','LM26051603134754',NULL,NULL,NULL,NULL,NULL,NULL),('D3AD16640E92F','SV26041416423036','LM26051603191755',NULL,NULL,NULL,NULL,NULL,NULL),('D480B5E8C9682','SV26032820590173','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D49B211E2D613','SV26041416422564','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('D4E82FF76AF73','SV26041416422745','LM26051603191755',NULL,NULL,NULL,NULL,NULL,NULL),('D51287365','SV26041416422949','LM26032821312229',0,0,0,0,'F','Ghép'),('D51714943','SV26041416422482','LM26041501105836',3,6,5.1,1.5,'D+','ghép'),('D57435F684681','SV26041416422482','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('D6342287800','SV26041416423036','LM26041501105836',10,3,5.1,1.5,'D+',NULL),('D6475822100','SV26041416422949','LM26041501105836',9,10,9.7,4,'A',NULL),('D6482BDF5F4AE','SV26041416422660','LM26041501105813',NULL,NULL,NULL,NULL,NULL,NULL),('D73536792','SV26041416422949','LM26041501105800',7,5,5.6,2,'C','Ghép'),('D7665A38CD4C3','SV26041416422524','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('D78573755','SV26041416422482','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('D7D6DDDBEDE7F','SV26032821181078','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('D7FB82EEC9D14','SV26041416422395','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D8798741A0860','SV26041416422994','LM26051603191755',NULL,NULL,NULL,NULL,NULL,NULL),('D8848EC9C8647','SV26041416423036','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('D886FB96BE844','SV26041416422349','LM26032821312229',NULL,NULL,NULL,NULL,NULL,NULL),('D8AD47DBFD229','SV26041416422349','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('D8C6E73EB935B','SV26041416422745','LM26041501105836',4,10,8.2,3.5,'B+',NULL),('D8D10F12F2DF3','SV26041416422949','LM26051603191755',6,6,6,2,'C',NULL),('D9C2C29B0B4C7','SV26041416422949','LM26051603134754',9,5,6.2,2,'C',NULL),('DA12112478442','SV26041416422440','LM26041501105832',NULL,NULL,NULL,NULL,NULL,NULL),('DA8C696CFD4AD','SV26041416422994','LM26041501105836',2,10,7.6,3,'B',NULL),('DA965EC07BE58','SV26032820590173','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('DAD9A71A72182','SV26041416422994','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL),('DBA6651481BA7','SV26041416422745','LM26051603134754',NULL,NULL,NULL,NULL,NULL,NULL),('DE2DEE0CFA7B5','SV26041416422440','LM26041501105800',NULL,NULL,NULL,NULL,NULL,NULL),('DE9485807E064','SV26041416422949','LM26051603142477',3,3,3,0,'F',NULL),('DFA67B8CD1C64','SV26041416422745','LM26051603142477',NULL,NULL,NULL,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `diemmonhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `diemtracnghiem`
+--
+
+DROP TABLE IF EXISTS `diemtracnghiem`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `diemtracnghiem` (
+  `MaTN` varchar(50) NOT NULL,
+  `MaSV` varchar(20) DEFAULT NULL,
+  `MaLopMon` varchar(20) DEFAULT NULL,
+  `SoCauDung` int DEFAULT NULL,
+  `TongSoCau` int DEFAULT NULL,
+  `FileID` varchar(255) DEFAULT NULL,
+  `ThoiGianLam` int DEFAULT NULL,
+  `ThoiGianNop` datetime DEFAULT NULL,
+  `SoLanViPham` int DEFAULT '0',
+  PRIMARY KEY (`MaTN`),
+  KEY `MaSV` (`MaSV`),
+  KEY `MaLopMon` (`MaLopMon`),
+  CONSTRAINT `diemtracnghiem_ibfk_1` FOREIGN KEY (`MaSV`) REFERENCES `sinhvien` (`MaSV`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `diemtracnghiem_ibfk_2` FOREIGN KEY (`MaLopMon`) REFERENCES `lopmonhoc` (`MaLopMon`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `diemtracnghiem`
+--
+
+LOCK TABLES `diemtracnghiem` WRITE;
+/*!40000 ALTER TABLE `diemtracnghiem` DISABLE KEYS */;
+INSERT INTO `diemtracnghiem` VALUES ('0ca5e7eb_SV26040115460848','SV26040115460848','LM26032821312229',2,8,'Trắc nghiệm AI - LM26032821312229 - 06/04/2026',39,'2026-04-10 18:13:50',8),('2d26f121_SV26040115460848','SV26040115460848','LM26032821312229',1,6,'Trắc nghiệm AI - LM26032821312229 - 01/04/2026',0,'2026-04-01 17:05:12',0),('4db7de26_SV26040115460848','SV26040115460848','LM26032821312229',0,6,'Trắc nghiệm AI - LM26032821312229 - 01/04/2026',0,'2026-04-01 16:30:22',0),('65e3f0f4_SV26040115460848','SV26040115460848','LM26032821312229',0,6,'Trắc nghiệm AI - LM26032821312229 - 01/04/2026',0,'2026-04-01 16:51:59',0),('7caf2ead_SV26040115460848','SV26040115460848','LM26032821312229',1,5,'Bài trắc nghiệm',0,'2026-04-01 16:22:11',4),('b3aebc35_SV26040115460848','SV26040115460848','LM26032821312229',0,5,'Bài trắc nghiệm',0,'2026-04-01 15:47:00',0),('e1f21830_SV26041416422949','SV26041416422949','LM26041501105836',2,10,'Trắc nghiệm AI - LM26041501105836 - 15/04/2026',45,'2026-05-20 16:01:56',1),('e1f21830_SV26041416423036','SV26041416423036','LM26041501105836',3,10,'Trắc nghiệm AI - LM26041501105836 - 15/04/2026',17,'2026-04-15 21:31:24',0);
+/*!40000 ALTER TABLE `diemtracnghiem` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `giaovien`
+--
+
+DROP TABLE IF EXISTS `giaovien`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `giaovien` (
+  `MaGV` varchar(20) NOT NULL,
+  `TenGV` varchar(100) NOT NULL,
+  `GioiTinh` varchar(10) DEFAULT NULL,
+  `NgaySinh` date DEFAULT NULL,
+  `DiaChi` varchar(255) DEFAULT NULL,
+  `Gmail` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`MaGV`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `giaovien`
+--
+
+LOCK TABLES `giaovien` WRITE;
+/*!40000 ALTER TABLE `giaovien` DISABLE KEYS */;
+INSERT INTO `giaovien` VALUES ('GV001','Nguyễn Văn An','Nam','1980-05-12','123 Lê Lợi, TP.HCM','nguyenvanan@uni.edu.vn'),('GV002','Trần Thị Bình','Nữ','1985-08-20','45 Nguyễn Trãi, Hà Nội','tranthiminh@uni.edu.vn'),('GV003','Lê Minh Châu','Nam','1978-11-03','67 Đinh Tiên Hoàng, HCM','leminhchau@uni.edu.vn'),('GV004','Phạm Thị Dung','Nữ','1990-03-15','89 Trần Hưng Đạo, DN','phamthidung@uni.edu.vn'),('GV005','Hoàng Văn Em','Nam','1982-07-28','12 Phan Chu Trinh, HN','hoangvanem@uni.edu.vn');
+/*!40000 ALTER TABLE `giaovien` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `hocki`
+--
+
+DROP TABLE IF EXISTS `hocki`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `hocki` (
+  `MaHocKi` varchar(20) NOT NULL,
+  `TenHocKi` varchar(50) NOT NULL,
+  `MaNamHoc` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`MaHocKi`),
+  KEY `MaNamHoc` (`MaNamHoc`),
+  CONSTRAINT `hocki_ibfk_1` FOREIGN KEY (`MaNamHoc`) REFERENCES `namhoc` (`MaNamHoc`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `hocki`
+--
+
+LOCK TABLES `hocki` WRITE;
+/*!40000 ALTER TABLE `hocki` DISABLE KEYS */;
+INSERT INTO `hocki` VALUES ('HK1_2223','Học kì 1','NH2223'),('HK1_2324','Học kì 1','NH2324'),('HK1_2425','Học kì 1','NH2425'),('HK2_2223','Học kì 2','NH2223'),('HK2_2324','Học kì 2','NH2324'),('HK2_2425','Học kì 2','NH2425');
+/*!40000 ALTER TABLE `hocki` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `khoahoc`
+--
+
+DROP TABLE IF EXISTS `khoahoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `khoahoc` (
+  `MaKhoa` varchar(20) NOT NULL,
+  `TenKhoa` varchar(100) NOT NULL,
+  PRIMARY KEY (`MaKhoa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `khoahoc`
+--
+
+LOCK TABLES `khoahoc` WRITE;
+/*!40000 ALTER TABLE `khoahoc` DISABLE KEYS */;
+INSERT INTO `khoahoc` VALUES ('K01','Khoá 1'),('K02','Khoá 2');
+/*!40000 ALTER TABLE `khoahoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lichhoc`
+--
+
+DROP TABLE IF EXISTS `lichhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lichhoc` (
+  `MaLich` varchar(20) NOT NULL,
+  `MaLopMon` varchar(20) DEFAULT NULL,
+  `NgayBatDau` date DEFAULT NULL,
+  `NgayKetThuc` date DEFAULT NULL,
+  `Thu` varchar(20) DEFAULT NULL,
+  `PhongHoc` varchar(50) DEFAULT NULL,
+  `Ca` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`MaLich`),
+  KEY `MaLopMon` (`MaLopMon`),
+  CONSTRAINT `lichhoc_ibfk_1` FOREIGN KEY (`MaLopMon`) REFERENCES `lopmonhoc` (`MaLopMon`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lichhoc`
+--
+
+LOCK TABLES `lichhoc` WRITE;
+/*!40000 ALTER TABLE `lichhoc` DISABLE KEYS */;
+INSERT INTO `lichhoc` VALUES ('LH334F1E7340','LM26041501105826','2025-02-01','2025-06-30','Thứ 4','D102','Ca 4'),('LH3A67706B71','LM26041501105813','2023-09-01','2024-01-15','Thứ 6','C104','Ca 3'),('LH3A7559CC79','LM26041501105803','2023-09-01','2024-01-15','Thứ 7','A101','Ca 4'),('LH4CECDCF2D1','LM26041501105829','2025-02-01','2025-06-30','Thứ 3','B105','Ca 3'),('LH66050723','LM26041501105813','2024-09-01','2025-01-15','Thứ 3','B102','Ca 3'),('LH66221719','LM26041501105800','2024-09-01','2025-01-15','Thứ 4','B103','Ca 1'),('LH68103934','LM26041501105823','2024-09-01','2025-01-15','Thứ 3','B108','Ca 3'),('LH74FBD4A044','LM26041501105836','2024-09-01','2025-01-15','Thứ 4','B103','Ca 1'),('LH8730761F72','LM26041501105816','2024-02-01','2024-06-30','Thứ 7','C105','Ca 2'),('LHB6DC40C905','LM26041501105832','2024-09-01','2025-01-15','Thứ 5','A105','Ca 4'),('LHB9C2CC9305','LM26041501105809','2024-02-01','2024-06-30','Thứ 2','C101','Ca 4'),('LHBD67B71359','LM26041501105800','2023-09-01','2024-01-15','Thứ 3','B101','Ca 1');
+/*!40000 ALTER TABLE `lichhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lop`
+--
+
+DROP TABLE IF EXISTS `lop`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lop` (
+  `MaLop` varchar(20) NOT NULL,
+  `TenLop` varchar(100) NOT NULL,
+  `MaKhoa` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`MaLop`),
+  KEY `fk_lop_khoa` (`MaKhoa`),
+  CONSTRAINT `fk_lop_khoa` FOREIGN KEY (`MaKhoa`) REFERENCES `khoahoc` (`MaKhoa`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lop`
+--
+
+LOCK TABLES `lop` WRITE;
+/*!40000 ALTER TABLE `lop` DISABLE KEYS */;
+INSERT INTO `lop` VALUES ('K01CNTT1','Công nghệ thông tin 1','K01'),('K01CNTT2','Công nghệ thông tin 2','K01'),('K01HTTT1','Hệ thống thông tin 1','K01'),('K02CNTT1','Công nghệ thông tin 1','K02'),('K02HTTT1','Hệ thống thông tin 1','K02');
+/*!40000 ALTER TABLE `lop` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `lopmonhoc`
+--
+
+DROP TABLE IF EXISTS `lopmonhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `lopmonhoc` (
+  `MaLopMon` varchar(20) NOT NULL,
+  `MaLop` varchar(20) DEFAULT NULL,
+  `MaMH` varchar(20) DEFAULT NULL,
+  `MaGV` varchar(20) DEFAULT NULL,
+  `MaHocKi` varchar(20) DEFAULT NULL,
+  `ChoPhepXemDiem` tinyint(1) NOT NULL DEFAULT '0',
+  `ChoPhepXemQuiz` tinyint(1) NOT NULL DEFAULT '0',
+  `TenLopMon` text,
+  PRIMARY KEY (`MaLopMon`),
+  KEY `MaLop` (`MaLop`),
+  KEY `MaMH` (`MaMH`),
+  KEY `MaGV` (`MaGV`),
+  KEY `MaHocKi` (`MaHocKi`),
+  CONSTRAINT `lopmonhoc_ibfk_1` FOREIGN KEY (`MaLop`) REFERENCES `lop` (`MaLop`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `lopmonhoc_ibfk_2` FOREIGN KEY (`MaMH`) REFERENCES `monhoc` (`MaMH`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `lopmonhoc_ibfk_3` FOREIGN KEY (`MaGV`) REFERENCES `giaovien` (`MaGV`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `lopmonhoc_ibfk_4` FOREIGN KEY (`MaHocKi`) REFERENCES `hocki` (`MaHocKi`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `lopmonhoc`
+--
+
+LOCK TABLES `lopmonhoc` WRITE;
+/*!40000 ALTER TABLE `lopmonhoc` DISABLE KEYS */;
+INSERT INTO `lopmonhoc` VALUES ('LM26032821312229','K01CNTT1','MH004','GV001','HK1_2425',1,1,NULL),('LM26041501105800','K01CNTT1','MH001','GV001','HK1_2324',1,0,NULL),('LM26041501105803','K01CNTT1','MH002','GV002','HK1_2324',0,0,NULL),('LM26041501105809','K01CNTT2','MH003','GV003','HK2_2324',0,0,NULL),('LM26041501105813','K01CNTT2','MH001','GV001','HK1_2324',0,0,NULL),('LM26041501105816','K01CNTT2','MH004','GV004','HK2_2324',0,0,NULL),('LM26041501105820','K01CNTT1','MH006','GV005','HK1_2425',0,0,NULL),('LM26041501105823','K01HTTT1','MH007','GV002','HK1_2425',0,0,NULL),('LM26041501105826','K01HTTT1','MH007','GV002','HK2_2425',0,0,NULL),('LM26041501105829','K02CNTT1','MH008','GV003','HK2_2425',0,0,NULL),('LM26041501105832','K01CNTT1','MH005','GV004','HK1_2425',0,0,''),('LM26041501105836','K02HTTT1','MH26032821192702','GV001','HK1_2425',0,1,NULL),('LM26051603134754','K02HTTT1','MH008','GV001','HK1_2223',1,0,'Quản trị hệ thống'),('LM26051603142477','K02HTTT1','MH006','GV001','HK1_2324',1,0,''),('LM26051603191755','K02HTTT1','MH006','GV001','HK2_2324',1,1,'Toán rr');
+/*!40000 ALTER TABLE `lopmonhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `monhoc`
+--
+
+DROP TABLE IF EXISTS `monhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `monhoc` (
+  `MaMH` varchar(20) NOT NULL,
+  `TenMH` varchar(100) NOT NULL,
+  `SoTinChi` int NOT NULL DEFAULT '0',
+  PRIMARY KEY (`MaMH`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `monhoc`
+--
+
+LOCK TABLES `monhoc` WRITE;
+/*!40000 ALTER TABLE `monhoc` DISABLE KEYS */;
+INSERT INTO `monhoc` VALUES ('MH001','Lập trình Python',3),('MH002','Cơ sở dữ liệu',3),('MH003','Mạng máy tính',2),('MH004','Trí tuệ nhân tạo',3),('MH005','Kế toán tài chính',3),('MH006','Toán rời rạc',2),('MH007','Lập trình Web',3),('MH008','Quản trị hệ thống',2),('MH26032821192702','Mon Hoc Test Drive',2);
+/*!40000 ALTER TABLE `monhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `namhoc`
+--
+
+DROP TABLE IF EXISTS `namhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `namhoc` (
+  `MaNamHoc` varchar(20) NOT NULL,
+  `NamHoc` varchar(50) NOT NULL,
+  PRIMARY KEY (`MaNamHoc`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `namhoc`
+--
+
+LOCK TABLES `namhoc` WRITE;
+/*!40000 ALTER TABLE `namhoc` DISABLE KEYS */;
+INSERT INTO `namhoc` VALUES ('NH2223','2022 - 2023'),('NH2324','2023 - 2024'),('NH2425','2024 - 2025');
+/*!40000 ALTER TABLE `namhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sinhvien`
+--
+
+DROP TABLE IF EXISTS `sinhvien`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sinhvien` (
+  `MaSV` varchar(20) NOT NULL,
+  `TenSV` varchar(100) NOT NULL,
+  `GioiTinh` varchar(10) DEFAULT NULL,
+  `NgaySinh` date DEFAULT NULL,
+  `DiaChi` varchar(255) DEFAULT NULL,
+  `MaLop` varchar(20) DEFAULT NULL,
+  `Gmail` varchar(100) DEFAULT NULL,
+  `MaKhoa` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  PRIMARY KEY (`MaSV`),
+  KEY `MaLop` (`MaLop`),
+  KEY `fk_sv_khoa` (`MaKhoa`),
+  CONSTRAINT `fk_sv_khoa` FOREIGN KEY (`MaKhoa`) REFERENCES `khoahoc` (`MaKhoa`),
+  CONSTRAINT `sinhvien_ibfk_1` FOREIGN KEY (`MaLop`) REFERENCES `lop` (`MaLop`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sinhvien`
+--
+
+LOCK TABLES `sinhvien` WRITE;
+/*!40000 ALTER TABLE `sinhvien` DISABLE KEYS */;
+INSERT INTO `sinhvien` VALUES ('SV26032820590173','Sinh Viên 0173','Nam','2004-01-01','Hà Nội','K01CNTT1','sv26032820590173@gmail.com','K01'),('SV26032821181078','Sinh Viên 1078','Nam','2004-01-01','Hà Nội','K01CNTT1','sv26032821181078@gmail.com','K01'),('SV26040115460848','Sinh Viên 0848','Nam','2004-01-01','Hà Nội','K01CNTT1','sv26040115460848@gmail.com','K01'),('SV26041416422349','Nguyễn Thị Anh','Nữ','2002-01-15','Hà Nội','K01CNTT1','nguyenthianh@gmail.com','K01'),('SV26041416422395','Trần Văn Bảo','Nam','2002-03-22','TP.HCM','K01CNTT1','tranvanbao@gmail.com','K01'),('SV26041416422440','Lê Thị Cẩm','Nữ','2002-06-10','Đà Nẵng','K01CNTT1','lethicam@gmail.com','K01'),('SV26041416422482','Phạm Văn Dũng','Nam','2002-09-05','Cần Thơ','K02CNTT1','phamvandung@gmail.com','K02'),('SV26041416422524','Hoàng Thị Én','Nữ','2002-11-18','Hải Phòng','K02CNTT1','hoangthien@gmail.com','K02'),('SV26041416422564','Vũ Văn Phong','Nam','2002-04-27','Huế','K02CNTT1','vuvanphong@gmail.com','K02'),('SV26041416422611','Đinh Thị Giang','Nữ','2003-02-14','Bình Dương','K01CNTT2','dinhthigiang@gmail.com','K01'),('SV26041416422660','Bùi Văn Hải','Nam','2003-05-30','Long An','K01CNTT2','buivanhai@gmail.com','K01'),('SV26041416422703','Ngô Thị Hương','Nữ','2003-08-19','Tiền Giang','K02CNTT1','ngothihuong@gmail.com','K02'),('SV26041416422745','Đặng Văn Khôi','Nam','2003-12-01','Vĩnh Long','K02HTTT1','dangvankhoi@gmail.com','K02'),('SV26041416422786','Lý Thị Lan','Nữ','2003-07-07','An Giang','K01CNTT2','lythilan@gmail.com','K01'),('SV26041416422825','Cao Văn Minh','Nam','2004-01-20','Kiên Giang','K01HTTT1','caovanminh@gmail.com','K01'),('SV26041416422864','Phan Thị Ngọc','Nữ','2004-04-12','Đồng Nai','K01HTTT1','phanthingoc@gmail.com','K01'),('SV26041416422904','Trịnh Văn Ổn','Nam','2004-06-25','Bà Rịa-VT','K01HTTT1','trinhvanon@gmail.com','K01'),('SV26041416422949','phat','Nam','2002-06-26','a','K02HTTT1','phattran2662002@gmail.com','K02'),('SV26041416422994','Nguyen Test','Nam','2000-01-01','Ha Noi','K02HTTT1','test@gmail.com','K02'),('SV26041416423036','a','Nam','2013-11-22','a','K02HTTT1','a@gmail.com','K02');
+/*!40000 ALTER TABLE `sinhvien` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sinhvien_lopmonhoc`
+--
+
+DROP TABLE IF EXISTS `sinhvien_lopmonhoc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `sinhvien_lopmonhoc` (
+  `MaSV` varchar(20) NOT NULL,
+  `MaLopMon` varchar(20) NOT NULL,
+  `TongKet` varchar(20) DEFAULT NULL,
+  `HocGhep` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`MaSV`,`MaLopMon`),
+  KEY `MaLopMon` (`MaLopMon`),
+  CONSTRAINT `sinhvien_lopmonhoc_ibfk_1` FOREIGN KEY (`MaSV`) REFERENCES `sinhvien` (`MaSV`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `sinhvien_lopmonhoc_ibfk_2` FOREIGN KEY (`MaLopMon`) REFERENCES `lopmonhoc` (`MaLopMon`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sinhvien_lopmonhoc`
+--
+
+LOCK TABLES `sinhvien_lopmonhoc` WRITE;
+/*!40000 ALTER TABLE `sinhvien_lopmonhoc` DISABLE KEYS */;
+INSERT INTO `sinhvien_lopmonhoc` VALUES ('SV26032820590173','LM26032821312229',NULL,0),('SV26032820590173','LM26041501105800',NULL,0),('SV26032821181078','LM26032821312229',NULL,0),('SV26032821181078','LM26041501105800',NULL,0),('SV26040115460848','LM26032821312229',NULL,0),('SV26040115460848','LM26041501105800',NULL,0),('SV26041416422349','LM26032821312229',NULL,0),('SV26041416422349','LM26041501105800',NULL,0),('SV26041416422349','LM26041501105832',NULL,0),('SV26041416422395','LM26032821312229',NULL,0),('SV26041416422395','LM26041501105800',NULL,0),('SV26041416422395','LM26041501105832',NULL,0),('SV26041416422440','LM26032821312229',NULL,0),('SV26041416422440','LM26041501105800',NULL,0),('SV26041416422440','LM26041501105832',NULL,0),('SV26041416422482','LM26041501105800',NULL,1),('SV26041416422482','LM26041501105836','5.1',1),('SV26041416422482','LM26051603142477',NULL,0),('SV26041416422524','LM26051603142477',NULL,0),('SV26041416422564','LM26051603142477',NULL,0),('SV26041416422611','LM26041501105813',NULL,0),('SV26041416422660','LM26041501105813',NULL,0),('SV26041416422703','LM26051603142477',NULL,0),('SV26041416422745','LM26041501105836','8.2',0),('SV26041416422745','LM26051603134754',NULL,0),('SV26041416422745','LM26051603142477',NULL,0),('SV26041416422745','LM26051603191755',NULL,0),('SV26041416422786','LM26041501105813',NULL,0),('SV26041416422949','LM26032821312229','0.0',0),('SV26041416422949','LM26041501105800','5.6',0),('SV26041416422949','LM26041501105836',NULL,0),('SV26041416422949','LM26051603134754',NULL,0),('SV26041416422949','LM26051603142477',NULL,0),('SV26041416422949','LM26051603191755','6.0',1),('SV26041416422994','LM26041501105836','7.6',0),('SV26041416422994','LM26051603134754',NULL,0),('SV26041416422994','LM26051603142477',NULL,0),('SV26041416422994','LM26051603191755',NULL,0),('SV26041416423036','LM26041501105836','5.1',0),('SV26041416423036','LM26051603134754',NULL,0),('SV26041416423036','LM26051603142477',NULL,0),('SV26041416423036','LM26051603191755',NULL,0);
+/*!40000 ALTER TABLE `sinhvien_lopmonhoc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `taikhoan`
+--
+
+DROP TABLE IF EXISTS `taikhoan`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `taikhoan` (
+  `UserName` varchar(100) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `Role` varchar(50) NOT NULL DEFAULT 'student',
+  PRIMARY KEY (`UserName`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `taikhoan`
+--
+
+LOCK TABLES `taikhoan` WRITE;
+/*!40000 ALTER TABLE `taikhoan` DISABLE KEYS */;
+INSERT INTO `taikhoan` VALUES ('admin','$2b$12$4nPYxheGQUXOlFFZ2T.n3OLskFBrCkl0PcNntTDbQZG6jhuufS/92','admin'),('GV001','$2b$12$VLhklnMq2BvSnuV7lzyOouixrvPY5u72XH50XADM8LLbNV90Spi6a','teacher'),('GV002','$2b$10$Hr/gdKisUB.lXsG50GDLU.xcPM.KJklOyOHGqWeKoTM8dHa5USJU.','teacher'),('GV003','$2b$10$leChRjViFwDKaK/Ks0cMz.PThWkrW4NnXujAGHsoFyZU8cGQjvb1u','teacher'),('GV004','$2b$12$4Icftl60TAi5UHwd1VAope3.E64Pn8YSNh.X01XdZ/00z8NY0DHWy','teacher'),('GV005','$2b$12$hzvDTdWmPMEhKwzdmkHV5OUgq.Cy7h1Z1PDZtVCZ/X984YzsCVWR.','teacher'),('SV26032820590173','$2b$12$NbK.YhGRMCGw45TW./rPjemjdHmAPYL893aE0TByX9dXF.D4GN10m','student'),('SV26032821181078','$2b$12$TXPl5sde/FP5kZFG.vYRzuE/MztRlOOnV4lkvE2XqeSGP7N/1YBy6','student'),('SV26040115460848','$2b$12$gtyr1kHWv/O1GLQVCX8ge.kVJWXl5MjfeLs.f0.ahoL1b5zetK.YK','student'),('SV26041416422349','$2b$12$uVQwPusImXEXBZYrrh7ovOpaPf89Wb6EUEET6AhdZH4Y6aHWHzTGy','student'),('SV26041416422395','$2b$12$zU3uY1lYN8MgcIY0POffm.J5GYcfvmulbTeUDo/Qu4NvtByzIpFrK','student'),('SV26041416422440','$2b$12$qEnl0mu4x.KfUXEfk20Squ2ErizyRi4dH5Rit5nFdsspYYvsv.yv6','student'),('SV26041416422482','$2b$12$Cc9O4IUffyfuMXmI1j8j/uCBKi1w5Zn/pjfOUB.YNR6uz3RVVfSFm','student'),('SV26041416422524','$2b$12$0tv7OHyfp6vEwwJYVIl9I.01AwpJ7L5Quriw8ONnww4qcff5LERW2','student'),('SV26041416422564','$2b$12$vUHto6fhcGJspenG1ZDhUON6zKKn1jgg7U30CTI9xI2e7TqaC0e/6','student'),('SV26041416422611','$2b$12$73F0t3OFbMag/mkiWXWQ4uAX1uavhoKWYh9H7Ii0aUXvbYXbStGXS','student'),('SV26041416422660','$2b$12$cQbttnvCQwy2cvUwDkkL7Or57/BbullOKnW9FkT/mfvDaGKOXZ7K.','student'),('SV26041416422703','$2b$12$C015UjhGiT6gqpgCGPG.3.yAmgwNkZaMtrpFpLImBIrDzW37Wg6y.','student'),('SV26041416422745','$2b$12$jB.mzlTNMJABK2ckwzvrW.6wI7eD.0SypLvJC.XgxnwRdXEQgkQPq','student'),('SV26041416422786','$2b$12$Abc70ola6usu0F5ZGrKzK.f2Bw2w8QvH.PEMtW4uc9oaOYDRtGW2C','student'),('SV26041416422825','$2b$12$9HGc.AJVOAyX1jXyPIIGxe6dDwPqPqPdHgdh/yk2jqF34ohQpZ7VK','student'),('SV26041416422864','$2b$12$G.FLB1zWBUHOi/OIG2QIpOyGd/th45F75jLTNXvbEJ.Pg2k.xgQ.C','student'),('SV26041416422904','$2b$12$9Ju7GoiROfJ/XSOVkYIF8O3t.d3X9F75PA7RpnvRaYoWj3ixLfh.i','student'),('SV26041416422949','$2b$12$mpgoKQcKPjpXrxMrfsveeeo.HUutRcQ/F2M9zyTqpgzpPy5pzNz6y','student'),('SV26041416422994','$2b$12$968hardkxRfyFW7Ji9iKj..UwdtSj4gVObzrAG/rLqYfN.DvpflVW','student'),('SV26041416423036','$2b$12$aEVHrNP3xE/EfjQWnQlZQuIf7K.Lphcq2EAT.OEJ6O5GQM1QxYice','student');
+/*!40000 ALTER TABLE `taikhoan` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-05-30 20:40:04

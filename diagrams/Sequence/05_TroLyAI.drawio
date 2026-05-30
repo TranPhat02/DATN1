@@ -235,13 +235,13 @@
             <mxPoint x="690" y="680" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rnp-HwVT8Z4YMwFZUKh0-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="5. Lấy 20 thông báo gần nhất (MongoDB)">
+        <mxCell id="rnp-HwVT8Z4YMwFZUKh0-22" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="5. Lấy 20 thông báo/ 50 tin nhắn&amp;nbsp;&lt;div&gt;gần nhất (MongoDB)&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="690" y="760" as="sourcePoint" />
             <mxPoint x="939" y="760" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="rnp-HwVT8Z4YMwFZUKh0-23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="6. Lấy 50 tin nhắn gần nhất(MongoDB)">
+        <mxCell id="rnp-HwVT8Z4YMwFZUKh0-23" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontColor=#000000;fontSize=11;" value="6. Lấy từ tài liệu lớp học">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="690" y="810" as="sourcePoint" />
             <mxPoint x="939" y="810" as="targetPoint" />

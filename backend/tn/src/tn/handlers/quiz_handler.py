@@ -705,7 +705,7 @@ async def get_submission_detail(quiz_id: str, ma_sv: str, caller_username: str =
         raise HTTPException(status_code=500, detail="MongoDB chưa sẵn sàng")
 
     # Students can only view their own submissions
-    if caller_role == "student" and caller_username and ma_sv != caller_username:
+    if caller_role == "student" and caller_username and ma_sv.upper() != caller_username.upper():
         raise HTTPException(status_code=403, detail="Bạn chỉ có thể xem bài làm của chính mình")
 
     submission = await db.quiz_submissions.find_one({"quizId": quiz_id, "maSV": ma_sv}, {"_id": 0})

@@ -5,6 +5,7 @@
 .env
 .env.*
 !.env.example
+!.env.docker
 
 # Google Service Account / OAuth credentials
 *.json.bak
