@@ -6,7 +6,7 @@
 
 services:
   # ── Backend (FastAPI) ──
-  backend:
+  backend-datn1:
     build:
       context: ./backend/tn
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
     env_file:
       - .env.docker
     environment:
-      MYSQL_URL: ${MYSQL_URL}
+      MYSQL_URL: mysql+pymysql://avnadmin:AVNS_-vnJo-A0P1uiv8792GE@mysql-220ea89f-thomson-04cc.j.aivencloud.com:12618/defaultdb
       MYSQL_SSL: "True"
       MYSQL_SSL_CA: /app/certs/ca.pem
       MONGO_URL: mongodb+srv://phattran2662002_db_user:123@cluster0.getdpyg.mongodb.net/
@@ -23,23 +23,33 @@ services:
       GOOGLE_DRIVE_CREDENTIALS_FILE: /app/credentials/credentials.json
     extra_hosts:
       - "host.docker.internal:host-gateway"
-    ports:
-      - "8000:8000"
+    # ports:
+    #   - "8000:8000"
     volumes:
       - ./cntt-491408-271a3f6050bc.json:/app/credentials/credentials.json:ro
       - ./backend/tn/drive_token.json:/app/drive_token.json:rw
       - ./backend/tn/certs:/app/certs:ro
+    networks:
+      - infra-proxy   # NGINX → this app (reverse proxy traffic)
 
   # ── Frontend (React + Nginx) ──
-  frontend:
+  frontend-datn1:
     build:
       context: ./frontend/hoc-tap
       dockerfile: Dockerfile
       args:
-        VITE_API_BASE_URL: /api/v1
+        VITE_API_BASE_URL: http://116.118.45.116:8000/api/v1
     container_name: tn-frontend
     restart: unless-stopped
-    ports:
-      - "80:80"
+    # ports:
+    #   - "80:80"
     depends_on:
-      - backend
+      - backend-datn1
+    networks:
+      - infra-proxy   # NGINX → this app (reverse proxy traffic)
+
+
+# External networks created by infrastructure docker-compose.yml
+networks:
+  infra-proxy:
+    external: true
