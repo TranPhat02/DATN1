@@ -21,6 +21,9 @@ services:
       MONGO_URL: mongodb+srv://phattran2662002_db_user:123@cluster0.getdpyg.mongodb.net/
       MONGO_DB_NAME: tn_db
       GOOGLE_DRIVE_CREDENTIALS_FILE: /app/credentials/credentials.json
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
     extra_hosts:
       - "host.docker.internal:host-gateway"
     # ports:

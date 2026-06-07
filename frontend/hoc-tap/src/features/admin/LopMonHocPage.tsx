@@ -25,7 +25,7 @@ const initialColumns: TableColumn<LopMonHoc>[] = [
   )},
 ];
 
-const csvColumns = ['MaLop', 'MaMH', 'MaGV', 'MaHocKi'];
+const csvColumns = ['TenLopMon', 'MaLop', 'MaMH', 'MaGV', 'MaHocKi'];
 
 const initialFields: FieldConfig[] = [
   { key: 'MaLopMon', label: 'Mã lớp môn (tự sinh)', hiddenOnAdd: true, disabledOnEdit: true },

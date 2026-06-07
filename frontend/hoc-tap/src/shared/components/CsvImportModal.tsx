@@ -8,7 +8,8 @@ interface CsvImportModalProps {
   open: boolean;
   title?: string;
   onClose: () => void;
-  onImport: (data: Record<string, string>[]) => void;
+  onImport?: (data: Record<string, string>[]) => void;
+  onImportFile?: (file: File) => void;
   expectedColumns?: string[];
 }
 
@@ -32,6 +33,7 @@ export default function CsvImportModal({
   title = 'Import CSV',
   onClose,
   onImport,
+  onImportFile,
   expectedColumns,
 }: CsvImportModalProps) {
   const [file, setFile] = useState<File | null>(null);
@@ -71,7 +73,10 @@ export default function CsvImportModal({
   };
 
   const handleImport = () => {
-    if (preview && preview.rows.length > 0) {
+    if (file && onImportFile) {
+      onImportFile(file);
+      handleReset();
+    } else if (preview && preview.rows.length > 0 && onImport) {
       onImport(preview.rows);
       handleReset();
     }
