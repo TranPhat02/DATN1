@@ -89,9 +89,11 @@ async def validation_exception_handler(request, exc: RequestValidationError):
 
 @app.exception_handler(IntegrityError)
 async def integrity_error_handler(request, exc: IntegrityError):
+    import logging
+    logging.error(f"IntegrityError: {exc}")
     return JSONResponse(
         status_code=400,
-        content={"detail": "Lỗi dữ liệu: Mã bạn nhập đã tồn tại hoặc vi phạm ràng buộc khóa ngoại."},
+        content={"detail": f"Lỗi dữ liệu: {str(exc.orig) if hasattr(exc, 'orig') else str(exc)}"},
         headers=CORS_HEADERS,
     )
 

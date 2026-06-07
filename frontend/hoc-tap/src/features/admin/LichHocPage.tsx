@@ -2,7 +2,7 @@
  * LichHocPage — Admin schedule CRUD + Gantt view
  * Features: CSV import/export, auto-generate from LopMonHoc
  */
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import toast from 'react-hot-toast';
 import { lichHocApi } from '../../api/lichHocApi';
 import { lopMonHocApi } from '../../api/lopMonHocApi';
@@ -11,6 +11,7 @@ import { namHocApi } from '../../api/namHocApi';
 import DataTable, { type TableColumn } from '../../shared/components/DataTable';
 import ConfirmModal from '../../shared/components/ConfirmModal';
 import GanttSchedule from '../../shared/components/GanttSchedule';
+import CsvImportModal from '../../shared/components/CsvImportModal';
 import type { LopMonHoc, HocKi, NamHoc } from '../../shared/types';
 import { exportToCsv } from '../../shared/utils/helpers';
 import {
@@ -18,7 +19,6 @@ import {
   HiOutlineCalendarDays,
   HiOutlineArrowDownTray,
   HiOutlineArrowUpTray,
-  HiOutlineSparkles,
 } from 'react-icons/hi2';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -46,13 +46,11 @@ export default function LichHocPage() {
   const [deleteRow, setDeleteRow] = useState<LichHocRow | null>(null);
   const [formData, setFormData] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [generating, setGenerating] = useState(false);
   const [importing, setImporting] = useState(false);
+  const [showCsv, setShowCsv] = useState(false);
 
   const [selectedNamHoc, setSelectedNamHoc] = useState<string>('');
   const [selectedHocKi, setSelectedHocKi] = useState<string>('');
-
-  const csvInputRef = useRef<HTMLInputElement>(null);
 
   const fetchData = useCallback(async () => {
     try {
@@ -149,37 +147,20 @@ export default function LichHocPage() {
   };
 
   /** Import CSV */
-  const handleImportCsv = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const handleImportCsvFile = async (file: File) => {
     setImporting(true);
     try {
       const result = await lichHocApi.importCsv(file);
       toast.success(result.message);
+      setShowCsv(false);
       fetchData();
     } catch (err: any) {
       toast.error(err?.response?.data?.detail || 'Import thất bại');
     } finally {
       setImporting(false);
-      if (csvInputRef.current) csvInputRef.current.value = '';
     }
   };
 
-  /** Tự động tạo TKB */
-  const handleAutoGenerate = async () => {
-    setGenerating(true);
-    try {
-      const result = await lichHocApi.autoGenerate();
-      if (result.created === 0) {
-        toast('Tất cả lớp môn học đã có lịch!', { icon: 'ℹ️' });
-      } else {
-        toast.success(result.message);
-        fetchData();
-      }
-    } catch (err: any) {
-      toast.error(err?.response?.data?.detail || 'Tạo TKB thất bại');
-    } finally { setGenerating(false); }
-  };
 
   const filteredHocKis = useMemo(() => {
     if (!selectedNamHoc) return hocKis;
@@ -193,26 +174,13 @@ export default function LichHocPage() {
     return result;
   }, [data, selectedNamHoc, selectedHocKi]);
 
-  // Hidden CSV import input
-  const csvInput = (
-    <input
-      ref={csvInputRef}
-      type="file"
-      accept=".csv"
-      style={{ display: 'none' }}
-      onChange={handleImportCsv}
-    />
-  );
-
   return (
     <div className="page animate-fade-in">
-      {csvInput}
-
       {/* ── Toolbar above table ── */}
       <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 'var(--space-3)', marginBottom: 'var(--space-3)', flexWrap: 'wrap' }}>
         <button
           className="btn btn-secondary"
-          onClick={() => csvInputRef.current?.click()}
+          onClick={() => setShowCsv(true)}
           disabled={importing}
           title="Import lịch học từ file CSV (MaLopMon;Thu;Ca;PhongHoc;NgayBatDau;NgayKetThuc)"
         >
@@ -226,15 +194,6 @@ export default function LichHocPage() {
         >
           <HiOutlineArrowDownTray /> Xuất CSV
         </button>
-        {/* <button
-          className="btn btn-primary"
-          onClick={handleAutoGenerate}
-          disabled={generating}
-          title="Tự động tạo lịch học cho các lớp môn học chưa có lịch"
-        >
-          <HiOutlineSparkles />
-          {generating ? 'Đang tạo...' : 'Tự động tạo TKB'}
-        </button> */}
       </div>
 
       <DataTable
@@ -350,6 +309,14 @@ export default function LichHocPage() {
       <div style={{ marginTop: 'var(--space-4)', padding: 'var(--space-3) var(--space-4)', background: 'var(--bg-secondary)', borderRadius: 'var(--radius-md)', fontSize: 'var(--font-size-sm)', color: 'var(--text-tertiary)' }}>
         💡 <strong>Định dạng CSV import:</strong> cột bắt buộc <code>MaLopMon</code>, tùy chọn: <code>Thu</code> · <code>Ca</code> · <code>PhongHoc</code> · <code>NgayBatDau</code> · <code>NgayKetThuc</code> (DD/MM/YYYY hoặc YYYY-MM-DD). Dấu phân cách: dấu chấm phẩy hoặc dấu phẩy.
       </div>
+
+      <CsvImportModal
+        open={showCsv}
+        title="Import Lịch học"
+        onClose={() => setShowCsv(false)}
+        onImportFile={handleImportCsvFile}
+        expectedColumns={['MaLopMon']}
+      />
     </div>
   );
 }
