@@ -15,7 +15,7 @@ services:
     env_file:
       - .env.docker
     environment:
-      MYSQL_URL: mysql+pymysql://avnadmin:AVNS_-vnJo-A0P1uiv8792GE@mysql-220ea89f-thomson-04cc.j.aivencloud.com:12618/defaultdb
+      MYSQL_URL: mysql://avnadmin:AVNS_-LV790K_nw3cM-6BsLH@datn1-phattran2662002-0d94.l.aivencloud.com:17819/defaultdb?ssl-mode=REQUIRED
       MYSQL_SSL: "True"
       MYSQL_SSL_CA: /app/certs/ca.pem
       MONGO_URL: mongodb+srv://phattran2662002_db_user:123@cluster0.getdpyg.mongodb.net/
